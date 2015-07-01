@@ -15,6 +15,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
+
  
 /// error handlers
  
@@ -28,6 +29,7 @@ if (app.get('env') === 'development') {
     app.use(express.static(path.join(__dirname, '../client/app')));
     app.use(express.static(path.join(__dirname, '../client/src')));
     app.use(express.static(path.join(__dirname, '../client/less')));
+
 
     // app.use(favicon(__dirname + '../client/.tmp'));
     // app.use(favicon(__dirname + '../client/app'));
