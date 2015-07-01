@@ -7,6 +7,11 @@
 	* Yeoman -- http://yeoman.io/codelab.html
 	* Building an Angular & Express App -- http://start.jcolemorrison.com/building-an-angular-and-express-app-part-1/
 
+## Current Issues/Road Blocks
+
+* Receiving 404, and Angular is not defined errors when viewing from localhost:3000. 
+*  Viewing from localhost:9000 works
+
 ## Build Notes
 
 **Note**: Please see the `README.md` in the `GemStoreExpress/server` directory for instructions on how to configure to run on Windows & OS X operating systems
