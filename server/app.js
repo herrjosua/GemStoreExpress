@@ -26,6 +26,13 @@ if (app.get('env') === 'development') {
     // This covers serving up the index page
     app.use(express.static(path.join(__dirname, '../client/.tmp')));
     app.use(express.static(path.join(__dirname, '../client/app')));
+    app.use(express.static(path.join(__dirname, '../client/src')));
+    app.use(express.static(path.join(__dirname, '../client/less')));
+
+    // app.use(favicon(__dirname + '../client/.tmp'));
+    // app.use(favicon(__dirname + '../client/app'));
+    // app.use(favicon(__dirname + '../client/src'));
+    // app.use(favicon(__dirname + '../client/less'));
  
     // Error Handling
     app.use(function(err, req, res, next) {

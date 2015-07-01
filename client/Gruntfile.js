@@ -18,7 +18,10 @@ module.exports = function (grunt) {
     // Configurable paths for the application
     var appConfig = {
         app: require('./bower.json').appPath || 'app',
-        dist: 'dist',
+        // Commenting out
+        //dist: 'dist',
+        // Replaced with server
+        dist: '../server/dist',
         less: 'less'
     };
 
