@@ -5,11 +5,16 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+// Notes: These two lines might be able to be removed
+//var routes = require('./routes/index');
+//var users = require('./routes/users');
+
+/**
+ * Route Imports
+ */
+var signup = require('./routes/signup');
 
 var app = express();
-
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -55,5 +60,12 @@ if (app.get('env') === 'production') {
         });
     });
 }
+
+/**
+ * Routes
+ */
+app.use('/signup', signup);
+
+//var app = express();
 
 module.exports = app;

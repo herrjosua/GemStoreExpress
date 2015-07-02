@@ -6551,6 +6551,9 @@ button.close {
 /* Importing Font Awesome LESS files */
 /* Importing Custom Variables LESS files */
 /* Importing Custom Styles */
-h1 {
-  color: blue;
+.signIn-widget .page-header {
+  margin-top: 10px;
+}
+.footer {
+  margin-top: 15px;
 }
