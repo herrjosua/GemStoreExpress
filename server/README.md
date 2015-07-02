@@ -7,7 +7,7 @@ To run on Windows -- Choice one option:
 
 ### Option 1
 
-* `angularExpress/server/package.json`
+* `GemStoreExpress/server/package.json`
 
 		* Change line 6 from "start": "NODE_ENV=production nodemon ./bin/www", to "start": "production.sh",
 
@@ -15,7 +15,7 @@ To run on Windows -- Choice one option:
 
 ### Option 2
 
-* Rename `angularExpress/server/package.json` to `angularExpress/server/package-MAC.json`
+* Rename `GemStoreExpress/server/package.json` to `GemStoreExpress/server/package-MAC.json`
 
-* Rename `angularExpress/server/package-WIN.json` to `angularExpress/server/package.json`
+* Rename `GemStoreExpress/server/package-WIN.json` to `GemStoreExpress/server/package.json`
 
