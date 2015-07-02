@@ -62,7 +62,7 @@
 	 - jade@1.3.1 
 	 - morgan@1.0.1 
 	 - serve-favicon@2.3.0 &mdash; **Note:** Being Deprecated use static-favicon instead (Already included)
-	 - static-favicon@2.0.0-alpha
+	 - static-favicon@2.0.0
 
 ## Current Issues/Road Blocks
 
