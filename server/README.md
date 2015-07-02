@@ -1,11 +1,8 @@
-# Building an Angular & Express App - Part 1 Notes
-URL: http://start.jcolemorrison.com/building-an-angular-and-express-app-part-1/
-
 ## Server Notes
 
-To run on Windows -- Choice one option:
+To run &mdash; pick the appropriate Operation System option 
 
-### Option 1
+### Windows Option
 
 * `GemStoreExpress/server/package.json`
 
@@ -13,9 +10,10 @@ To run on Windows -- Choice one option:
 
 		* Change line 7 from  "test": "NODE_ENV=development nodemon ./bin/www" to "test": "test.sh"
 
-### Option 2
+### OSX
 
 * Rename `GemStoreExpress/server/package.json` to `GemStoreExpress/server/package-MAC.json`
 
 * Rename `GemStoreExpress/server/package-WIN.json` to `GemStoreExpress/server/package.json`
+
 
