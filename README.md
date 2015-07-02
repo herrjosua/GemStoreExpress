@@ -1,12 +1,12 @@
 # GemStoreExpress
-* Git repository: https://github.com/herrjosua/GemStoreExpress.git
+* Git repository: [GemStoreExpress](https://github.com/herrjosua/GemStoreExpress.git)
 * Author: Joshua Bock
 * Email: Josh@JoshuaBock.com
-* URL: http://www.JoshuaBock.com
+* URL: [Portfolio Website](joshuabock.com)
 * Description:  AngularJS Project based off the following projects
-	* Shaping up with AngularJS &mdash; [https://www.codeschool.com/courses/shaping-up-with-angular-js](https://www.codeschool.com/courses/shaping-up-with-angular-js/ "Shaping up with AngularJS")
-	* Yeoman &mdash; [http://yeoman.io/codelab.html](http://yeoman.io/codelab.html/ "Yeoman Tutorial")
-	* Building an Angular & Express App &mdash; [http://start.jcolemorrison.com/building-an-angular-and-express-app-part-1/](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-1/ "Building an Eangular & Express App - Part 1")
+	* [Shaping up with AngularJS](https://www.codeschool.com/courses/shaping-up-with-angular-js/ "Shaping up with AngularJS")
+	* [Yeoman](http://yeoman.io/codelab.html/ "Yeoman Tutorial")
+	* [Building an Angular & Express App Part 1](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-1/ "Building an Eangular & Express App - Part 1")
 
 ## Project Dependencies
 
@@ -66,12 +66,21 @@
 
 ## Current Issues/Road Blocks
 
-*None
+* In order to install `bcrypt` I need Python which I can not install on my workstation. Will switch to my Mac
+	* [node-gyp](https://github.com/TooTallNate/node-gyp/#installation) 
+	* [bcrypt](https://github.com/ncb000gt/node.bcrypt.js)
+* Need to configure this to work with one of the following database options:
+	* [MongoLab’s RESTful Data API](http://docs.mongolab.com/data-api/)
+	* [MongoDB driver](http://docs.mongolab.com/connecting/)
+	* Follow the setup provided in the [Building an Angular & Express App - Part 2](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App - Part 2") tutorial
 
 ## Latest Status
 
-* Building an Angular & Express App - Part 2 &mdash; [http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App - Part 2")
+* [Building an Angular & Express App - Part 2](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App - Part 2")
 	* ~~The Angular Signup Controller &mdash; Having trouble getting the signin controller to output what I entered in the form~~
+	* Setup a Local MongoDB
+* [Building an Angular & Express App - Part 3](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App - Part 3")
+	* Some Project Prep
 
 ## Installation Instructions
 
