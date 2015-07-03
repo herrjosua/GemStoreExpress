@@ -72,13 +72,13 @@
 * Need to configure this to work with one of the following database options:
 	* [MongoLab’s RESTful Data API](http://docs.mongolab.com/data-api/)
 	* [MongoDB driver](http://docs.mongolab.com/connecting/)
-	* Follow the setup provided in the [Building an Angular & Express App - Part 2](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App - Part 2") tutorial
+	* ~~Follow the setup provided in the [Building an Angular & Express App - Part 2](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App - Part 2") tutorial~~
 
 ## Latest Status
 
 * [Building an Angular & Express App - Part 2](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App - Part 2")
 	* ~~The Angular Signup Controller &mdash; Having trouble getting the signin controller to output what I entered in the form~~
-	* Setup a Local MongoDB
+	* ~~Setup a Local MongoDB~~
 * [Building an Angular & Express App - Part 3](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App - Part 3")
 	* Some Project Prep
 
@@ -94,11 +94,15 @@
 
 ### Development Build
 
-* Open two terminal prompts
+* Open four terminal prompts
 
 	* Change directory to `GemStoreExpress/client`
 
 	* Change directory to `GemStoreExpress/server`
+
+    * Change directory to `GemStoreExpress` for starting Mongodb
+
+    * Change directory to `GemStoreExpress` for accessing database
 
 * In the  `GemStoreExpress/client` terminal prompt
 
@@ -111,6 +115,14 @@
 	* Run `npm test`
 
 	* Close the browser window that automatically opens
+
+* In the first `GemStoreExpress` terminal prompt
+
+    * Run `mongod --dbpath data/db/ --logpath data/logs/mongodb.log --logappend`
+
+* In the second `GemStoreExpress` terminal prompt
+
+    * Run `mongo`
 
 
 ### Production Build
