@@ -25,7 +25,6 @@ angular.module('gemStoreApp').controller('SignupCtrl', function ($scope, $http) 
 	// This is our method that will post to our server.
 	signup.submit = function () {
 
-
 		console.log("First name: " + user.firstName);
 		console.log("Last name: " + user.lastName);
 		console.log("Email: " + user.email);
@@ -57,12 +56,12 @@ angular.module('gemStoreApp').controller('SignupCtrl', function ($scope, $http) 
 		// we'll come back to here and fill in more when ready
 		request.success(function (data) {
 			// to be filled in on success
-			console.log(data.msg);
+			console.log(data);
 		});
 
 		request.error(function (data) {
 			// to be filled in on error
-			console.log(data.msg);
+			console.log(data);
 		});
 
 	};

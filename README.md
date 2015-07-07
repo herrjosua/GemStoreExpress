@@ -80,7 +80,10 @@
 	* ~~The Angular Signup Controller &mdash; Having trouble getting the signin controller to output what I entered in the form~~
 	* ~~Setup a Local MongoDB~~
 * [Building an Angular & Express App - Part 3](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App - Part 3")
-	* Some Project Prep
+	* ~~Some Project Prep~~
+* Setting up a Mongodb Admin UI
+    * ~~Trying [Mongo-Express](http://github.com/andzdroid/mongo-express "Mongo-Express")!!
+* Need to figure out how to query my local database to show the users I created
 
 ## Installation Instructions
 
@@ -102,7 +105,7 @@
 
     * Change directory to `GemStoreExpress` for starting Mongodb
 
-    * Change directory to `GemStoreExpress` for accessing database
+    * Change directory to `GemStoreExpress` for command line access to database
 
 * In the  `GemStoreExpress/client` terminal prompt
 

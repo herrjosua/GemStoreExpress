@@ -23,6 +23,11 @@ angular.module('gemStoreApp', ['ngResource','ngRoute'])
               templateUrl: 'views/signup.html',
               controller: 'SignupCtrl'
             })
+            .when('/users', {
+              templateUrl: 'views/users.html',
+              controller: 'UsersCtrl',
+              controllerAs: 'users'
+            })
             .otherwise({
                 redirectTo: '/'
             });

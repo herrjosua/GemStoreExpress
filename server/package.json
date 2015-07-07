@@ -1,18 +1,24 @@
 {
-	"name": "server",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "NODE_ENV=production nodemon ./bin/www",
-		"test": "NODE_ENV=development nodemon ./bin/www"
-	},
-	"dependencies": {
-		"express": "~4.0.0",
-		"static-favicon": "latest",
-		"morgan": "~1.0.0",
-		"cookie-parser": "~1.0.1",
-		"body-parser": "~1.0.0",
-		"debug": "~0.7.4",
-		"serve-favicon": "latest"
-	}
-} 
+  "name": "server",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=production nodemon ./bin/www",
+    "test": "NODE_ENV=development nodemon ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.3",
+    "body-parser": "~1.0.0",
+    "cli-color": "^1.0.0",
+    "cookie-parser": "~1.0.1",
+    "debug": "~0.7.4",
+    "express": "~4.0.0",
+    "moment": "^2.10.3",
+    "mongoose": "^4.0.6",
+    "morgan": "~1.0.0",
+    "npmlog": "^1.2.1",
+    "serve-favicon": "latest",
+    "static-favicon": "latest",
+    "underscore": "^1.8.3"
+  }
+}
