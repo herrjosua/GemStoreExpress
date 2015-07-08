@@ -1,7 +1,7 @@
 angular.module('gemStoreApp.usersService',['ngResource'])
 
     .factory('usersService', function($resource) {
-        var Project = $resource('mongodb://localhost/test');
+        var Project = $resource('mongodb://localhost/gemStoreDb');
 
         Project.prototype.update = function(cb) {
             return Project.update({id: this._id.$oid},

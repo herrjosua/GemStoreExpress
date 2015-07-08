@@ -8,6 +8,9 @@ var db = require('./database');
 
 var app = express();
 
+//var mongoose = require('mongoose');
+//console.log("mongoose status: " + mongoose.connection.readyState);
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
@@ -15,31 +18,25 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 
-/**
-* Development Settings
-*/
+// Development Settings
 if (app.get('env') === 'development') {
     // This will change in production since we'll be using the dist folder
     app.use(express.static(path.join(__dirname, '../client')));
     // This covers serving up the index page
     app.use(express.static(path.join(__dirname, '../client/.tmp')));
     app.use(express.static(path.join(__dirname, '../client/app')));
-
 }
 
-/**
-* Production Settings
-*/
+// Production Settings
 if (app.get('env') === 'production') {
     // changes it to use the optimized version for production
     app.use(express.static(path.join(__dirname, '/dist')));
 }
 
-/**
- * Routes
- */
+// Routes
 var router = require('./router')(app);
 
+// Error Handling
 app.use(function(err,req,res,next) {
     res.status(err.status || 500);
 });

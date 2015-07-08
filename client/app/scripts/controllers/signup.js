@@ -25,11 +25,11 @@ angular.module('gemStoreApp').controller('SignupCtrl', function ($scope, $http) 
 	// This is our method that will post to our server.
 	signup.submit = function () {
 
-		console.log("First name: " + user.firstName);
-		console.log("Last name: " + user.lastName);
-		console.log("Email: " + user.email);
-		console.log("Password: " + user.pwd);
-		console.log("Confirm Password: " + user.confirmPwd);
+		console.log('First name: ' + user.firstName);
+		console.log('Last name: ' + user.lastName);
+		console.log('Email: ' + user.email);
+		console.log('Password: ' + user.pwd);
+		console.log('Confirm Password: ' + user.confirmPwd);
 
 		// console.log(signup.user.firstName);
 
@@ -37,13 +37,13 @@ angular.module('gemStoreApp').controller('SignupCtrl', function ($scope, $http) 
 		// aren't you glad you're not typing out
 		// $scope.signup.user.firstname everytime now??
 		if (!user.firstName || !user.lastName || !user.email || !user.pwd || !user.confirmPwd) {
-			alert('Please fill out all form fields.');
+			//alert('Please fill out all form fields.');
 			return false;
 		}
 
 		// make sure the passwords match match
 		if (user.pwd !== user.confirmPwd) {
-			alert('Your passwords must match.');
+			//alert('Your passwords must match.');
 			return false;
 		}
 

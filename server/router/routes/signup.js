@@ -1,11 +1,14 @@
-/**
- * This handles the signing up of users
- */
+// This handles the signing up of users
+
+// Includes Express
 var express = require('express');
+// Initialize the router
 var router = express.Router();
+
 var moment = require('moment');
 var _ = require('underscore');
 var color = require('cli-color');
+
 var db = require('../../database');
 var Users = db.users;
 
@@ -85,5 +88,12 @@ router.post('/', function (req, res) {
 	});
 
 });
+
+// Special router for signin.
+// router.post('/special', function (req, res) {
+// 	res.json({"msg": 'this was posted to /signup/special'});
+
+// 	console.log('Special route!');
+// });
 
 module.exports = router;

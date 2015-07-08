@@ -1,13 +1,10 @@
-/**
- * Our Database Interface
- */
+//Our Database Interface
+
 var mongoose = require('mongoose');
 var UserModel = require('./schemas/users');
 
 // Connections
-var developmentDb = 'mongodb://localhost/test';
-//MongoLab Driver
-// var developmentDb = 'mongodb://gemStoreAdmin:5z9E3!7oPQ.mongolab.com:31581/gemstore'
+var developmentDb = 'mongodb://localhost/gemStoreDb';
 var productionDb = 'urlToYourProductionMongoDb';
 var usedDb;
 
