@@ -11,6 +11,8 @@
 
 ## Project Dependencies
 
+### Package.json
+
 - **General**
 - NPM version: Tested with `2.12.1` 
 - Node version:  At least version `0.10.0`. Tested with `0.12.0`
@@ -65,6 +67,20 @@
 - serve-favicon@2.3.0 &mdash; **Note:** Being Deprecated use static-favicon instead (Already included)
 - static-favicon@2.0.0
 
+### Bower.json
+
+- **Client**
+- angular@1.3.16
+- angular-bootstrap@~0.13.0
+- angular-ui-router@0.2.15
+- mongojs@~1.0.1
+- font-awesome@~4.3.0
+- bootstrap-less@~3.3.4
+- angular-resource@1.3.16
+- angular-route@1.3.16 &mdash; **Note:** Will remove once angular-ui-router is properly configered
+- karma@~0.4.6
+- protractor@~2.1.0
+
 ## Current Issues/Road Blocks
 
 * Working on displaying the list of users. I am receiving a JSON object of my users
@@ -72,6 +88,13 @@
 ## Latest Status
 
 * Working on displaying the list of users. I am receiving a JSON object of my users
+
+## Todo
+
+* Convert `NGRoutes` to `Angular-ui`
+* Convert the factory for users to use `$resource` instead of `$http`
+* Move the user factory into the `services` directory
+* Look into passport for authentication
 
 ## Installation Instructions
 

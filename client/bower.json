@@ -9,6 +9,7 @@
   "dependencies": {
     "angular": "1.3.16",
     "angular-bootstrap": "~0.13.0",
+    "angular-ui-router": "0.2.15",
     "mongojs": "~1.0.1",
     "font-awesome": "~4.3.0",
     "bootstrap-less": "~3.3.4",
@@ -21,8 +22,5 @@
     "angular-mocks": "1.3.16"
   },
   "appPath": "app",
-  "moduleName": "gemStoreApp",
-  "resolutions": {
-    "angular": "1.3.16"
-  }
+  "moduleName": "gemStoreApp"
 }
