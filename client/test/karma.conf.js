@@ -21,6 +21,7 @@ module.exports = function(config) {
       // bower:js
       'src/vendor/angular/angular.js',
       'src/vendor/angular-bootstrap/ui-bootstrap-tpls.js',
+      'src/vendor/angular-ui-router/release/angular-ui-router.js',
       'src/vendor/angular-resource/angular-resource.js',
       'src/vendor/angular-route/angular-route.js',
       'src/vendor/angular-mocks/angular-mocks.js',

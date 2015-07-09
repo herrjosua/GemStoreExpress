@@ -83,17 +83,20 @@
 
 ## Current Issues/Road Blocks
 
-* Working on displaying the list of users. I am receiving a JSON object of my users
+* ~~Working on displaying the list of users. I am receiving a JSON object of my users!!
+* ~~Signin form is not clearing after successfully form submission~~
 
 ## Latest Status
 
-* Working on displaying the list of users. I am receiving a JSON object of my users
+* **Completed** ~~Working on displaying the list of users. I am receiving a JSON object of my users!!~~
+* **Completed** ~~Working on adding functions to delete users from the user list~~
+* Working on moving signin form to a modal rather than a full page
 
 ## Todo
 
 * Convert `NGRoutes` to `Angular-ui`
-* Convert the factory for users to use `$resource` instead of `$http`
-* Move the user factory into the `services` directory
+* **Completed** ~~Convert the factory for users to use `$resource` instead of `$http`!!~~
+* **Completed** ~~Move the user factory into the `services` directory~~
 * Look into passport for authentication
 
 ## Installation Instructions

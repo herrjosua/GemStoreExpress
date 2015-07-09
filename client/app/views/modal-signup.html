@@ -1,0 +1,62 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="myModalLabel">Signup as a new user</h4>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal signup-form">
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="firstName">First Name</label>
+            <div class="col-md-8">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                    <input type="text" class="form-control" id="userFirstName" name="firstName" placeholder="First Name" ng-model="user.firstName">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="lastName">Last Name</label>
+            <div class="col-md-8">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" ng-model="user.lastName">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="email">Email</label>
+            <div class="col-md-8">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope-o"></i></span>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="user.email">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="pwd">Password</label>
+            <div class="col-md-8">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-key"></i></span>
+                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password" ng-model="user.pwd">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="confirmPwd">Confirm Password</label>
+            <div class="col-md-8">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-key"></i></span>
+                    <input type="password" class="form-control" id="confirmPwd" name="confirmPwd" placeholder="Confirm Password" ng-model="user.confirmPwd">
+                </div>
+            </div>
+        </div>
+        <!-- <div class="form-group">
+            <div class="col-md-offset-6 col-md-3">
+                <button type="submit" class="btn btn-primary btn-block" id="signup" name="signup" ng-click="signup.submit()">Submit</button>
+            </div>
+        </div> -->
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" ng-click="cancel()">Close</button>
+    <button type="button" class="btn btn-primary" id="signup" name="signup" ng-click="submit()">Save changes</button>
+</div> 

@@ -38,7 +38,7 @@ userSchema.pre('save', function (next) {
 
 	// generate salt
 	bcrypt.genSalt(10, function(err, salt){
-		if(err){
+		if (err){
 			return next(err);
 		}
 
@@ -47,18 +47,30 @@ userSchema.pre('save', function (next) {
 
 			console.log("What is salt? " + salt);
 
-			if(err){
+			if (err) {
 				return next(err);
 			}
+
 			user.password = hash;
 			next();
 		});
 	});
 });
 
+//userSchema.methods.delete = function(req, res, next) {
+
+	//var user = this;
+
+	//user.remove
+
+//}
+
 userSchema.methods.comparePassword = function (triedPassword, cb) {
 	bcrypt.compare(triedPassword, this.password, function(err, isMatch) {
-		if(err) return cb(err);
+		if (err) {
+			return cb(err)
+		};
+
 		cb(null, isMatch);
 	});
 };

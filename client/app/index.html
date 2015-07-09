@@ -51,7 +51,7 @@
         </div>
 
         <div class="container-fluid">
-            <div ng-view=""></div>
+            <div ui-view></div>
         </div>
 
         <div class="footer">
@@ -64,6 +64,7 @@
         <!-- bower:js -->
         <script src="src/vendor/angular/angular.js"></script>
         <script src="src/vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="src/vendor/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="src/vendor/angular-resource/angular-resource.js"></script>
         <script src="src/vendor/angular-route/angular-route.js"></script>
         <!-- endbower -->
@@ -73,9 +74,9 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/services/products/products-service.js"></script>
         <script src="scripts/controllers/signup.js"></script>
         <script src="scripts/controllers/users.js"></script>
+        <script src="scripts/services/users/users-service.js"></script>
         <!-- endbuild -->
     </body>
 </html>

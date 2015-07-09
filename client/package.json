@@ -40,7 +40,7 @@
     "karma-phantomjs-launcher": "^0.2.0",
     "karma-ng-html2js-preprocessor": "^0.1.0",
     "load-grunt-tasks": "^3.1.0",
-    "mongojs": "^1.0.1",
+    "mongojs": "2.12.1",
     "phantomjs": "^1.9.17",
     "time-grunt": "^1.0.0"
   },

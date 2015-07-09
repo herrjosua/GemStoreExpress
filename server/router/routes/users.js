@@ -5,26 +5,18 @@ var express = require('express');
 // Initialize the router
 var router = express.Router();
 
-
-// Include mongoose
-// var mongoose = require('mongoose');
-
 var db = require('../../database');
 var Users = db.users;
 
-//console.log("Do I have access to? " + usedDb)
+// POST route for adding users?
+router.post('/', function (req,res) {
+	//var user = new User(req.body);
 
-//console.log(Users);
+	// QUESTION this is currently in the signup route. Should this be moved here??
 
-//console.log("mongoose status: " + mongoose.connection.readyState);
+});
 
-/* GET users listing. */
-// router.get('/', function(req, res) {
-// 	res.send('respond with a resource');
-// 	//console.log(res);
-// });
-
-// // GET route for retrieving posts
+// GET route for retrieving users
 router.get('/', function(req, res, next) {
 	Users.find(function(err, users) {
 		if (err) {
@@ -32,11 +24,12 @@ router.get('/', function(req, res, next) {
 		}
 
 		res.json(users);
+		console.log(users);
 	});
 });
 
 // Pre-loading users
-router.param('/user', function(req, res, next, id) {
+router.param('/', function(req, res, next, id) {
 	var query = Users.findById(id);
 
 	query.exec(function (err, user) {
@@ -54,22 +47,34 @@ router.param('/user', function(req, res, next, id) {
 	});
 });
 
-// Get a single user
-router.get('/user/:user', function(req, res) {
-	res.json(req.user);
+// GET route for a single user
+router.get('/:id', function(req, res) {
+	Users.findById(req.params.id, function(err, user) {
+		if (err) {
+			return next(err);
+		}
+
+		res.json(user);
+		console.log(user);
+	});
+
 });
 
-// // POST route
-// router.post('/users', function(req, res, next) {
-// 	var user = new Users(req.body);
+// PUT route for a single user
+router.put('/:id', function(req, res) {
 
-// 	user.save(function(err, user) {
-// 		if(err) {
-// 			return next(err);
-// 		}
+})
 
-// 		res.josn(user);
-// 	});
-// });
+// DELETE route for a single user
+router.delete('/:id', function(req, res) {
+
+	Users.findByIdAndRemove(req.params.id, req.body, function (err, user) {
+		if (err) {
+			return next(err);
+		}
+
+		res.json(user);
+	});
+});
 
 module.exports = router;
