@@ -32,6 +32,7 @@ angular.module('gemStoreApp')
 
             var modalInstance = $modal.open({
                 animation: $scope.animationsEnabled,
+                backdrop: true,
                 templateUrl: '../../views/modal-signup.html',
                 controller: 'ModalInstanceCtrl',
                 resolve: {
@@ -43,6 +44,7 @@ angular.module('gemStoreApp')
 
             modalInstance.result.then(function () {
                 $log.info('Modal dismissed at: ' + new Date());
+                $scope.user = '';
             });
         };
 
@@ -51,7 +53,7 @@ angular.module('gemStoreApp')
         };
     }])
 
-    .controller('ModalInstanceCtrl', function ($scope, $modalInstance, user) {
+    .controller('ModalInstanceCtrl', function ($scope, $modalInstance, user, $http) {
         $scope.user = user;
 
         $scope.ok = function () {
@@ -65,11 +67,34 @@ angular.module('gemStoreApp')
         $scope.submit = function () {
             console.log('I wanna submit this form!!');
 
-            console.log('First name: ' + user.firstName);
-            console.log('Last name: ' + user.lastName);
-            console.log('Email: ' + user.email);
-            console.log('Password: ' + user.pwd);
-            console.log('Confirm Password: ' + user.confirmPwd);
+            if (!user.firstName || !user.lastName || !user.email || !user.pwd || !user.confirmPwd) {
+                console.log('Please fill out all form fields.');
+                return false;
+            }
+
+            // make sure the passwords match match
+            if (user.pwd !== user.confirmPwd) {
+                //alert('Your passwords must match.');
+                console.log('Your passwords must match.');
+                return false;
+            }
+
+            console.log(user);
+
+            // Make the request to the server ... which doesn't exist just yet
+            var request = $http.post('/users', user);
+
+            request.success(function (data) {
+                console.log(data);
+                $scope.user = '';
+                $modalInstance.close();
+            });
+
+            request.error(function (data) {
+                console.log(data);
+            });
+
+           
         };
 
 

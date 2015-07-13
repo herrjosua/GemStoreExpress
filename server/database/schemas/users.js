@@ -57,14 +57,6 @@ userSchema.pre('save', function (next) {
 	});
 });
 
-//userSchema.methods.delete = function(req, res, next) {
-
-	//var user = this;
-
-	//user.remove
-
-//}
-
 userSchema.methods.comparePassword = function (triedPassword, cb) {
 	bcrypt.compare(triedPassword, this.password, function(err, isMatch) {
 		if (err) {

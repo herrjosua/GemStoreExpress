@@ -1,0 +1,19 @@
+<div id="navbar" class="collapse navbar-collapse" ng-controller="uiDropdown">
+	<ul class="nav navbar-nav">
+		<li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+		<li ui-sref-active="active"><a ui-sref="users">Users</a></li>
+		<li ui-sref-active="active"><a ui-sref="products">Products</a></li>
+		<li ui-sref-active="active"><a ui-sref="about">About</a></li>
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
+		<li>
+			<a href="#/cart"><i class="fa fa-shopping-cart"></i> <span class="badge">0</span></a>
+		</li>
+		<li class="dropdown" dropdown is-open="status.isopen">
+			<a href="#" class="dropdown-toggle" dropdown-toggle ng-disabled="disabled" role="button" aria-expanded="false" ><i class="fa fa-user"></i> Guest <span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li><a href="#"><i class="fa fa-sign-in"></i> Sign In</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>

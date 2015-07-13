@@ -1,5 +1,5 @@
 /**
- * Our Schema for Users
+ * Our Schema for Products
  */
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
@@ -37,12 +37,28 @@ var productSchema = new Schema({
 
 	},
 	reviews: {
-
+		stars: {
+			type: Number,
+			require: true,
+		},
+		review: {
+			type: String,
+			require: true,
+		},
+		author: {
+			type: String,
+			require: true,
+		},
+		createdOn: {
+			type: Date,
+			require: true,
+		}
 	}
 });
 
-// Methods to Add, Update, and Remove Products
+//productSchema.pre('save', function (next) {
 
+//});
 
 var Product = mongoose.model('Product', productSchema);
 

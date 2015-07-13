@@ -7,7 +7,10 @@
 * Description:  AngularJS Project based off the following projects
 * [Shaping up with AngularJS](https://www.codeschool.com/courses/shaping-up-with-angular-js/ "Shaping up with AngularJS")
 * [Yeoman](http://yeoman.io/codelab.html/ "Yeoman Tutorial")
-* [Building an Angular & Express App Part 1](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-1/ "Building an Eangular & Express App - Part 1")
+* [Building an Angular & Express App &mdash; Part 1](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-1/ "Building an Eangular & Express App &mdash; Part 1")
+* [Building an Angular & Express App &mdash; Part 2](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App &mdash; Part 2")
+* [Building an Angular & Express App &mdash; Part 3](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-3/ "Building an Eangular & Express App &mdash; Part 3")
+* [Mean-Stack Tutorial &mdash; Adding Authentication via Passport](https://thinkster.io/mean-stack-tutorial/ "Mean-Stack Tutorial &mdash; Adding Authentication via Passport")
 
 ## Project Dependencies
 
@@ -83,21 +86,17 @@
 
 ## Current Issues/Road Blocks
 
-* ~~Working on displaying the list of users. I am receiving a JSON object of my users!!
-* ~~Signin form is not clearing after successfully form submission~~
 
 ## Latest Status
 
-* **Completed** ~~Working on displaying the list of users. I am receiving a JSON object of my users!!~~
-* **Completed** ~~Working on adding functions to delete users from the user list~~
-* Working on moving signin form to a modal rather than a full page
 
 ## Todo
 
-* Convert `NGRoutes` to `Angular-ui`
-* **Completed** ~~Convert the factory for users to use `$resource` instead of `$http`!!~~
-* **Completed** ~~Move the user factory into the `services` directory~~
-* Look into passport for authentication
+* ~~Add passport for authentication~~
+* ~~Add additional products via database terminal~~
+* Create add products modal
+* Finish up Product Details
+* ~~Restore navbar from previous GemStore project!!
 
 ## Installation Instructions
 
@@ -122,23 +121,23 @@
 
 * In the first `GemStoreExpress` terminal prompt
 
-* Run `mongod --dbpath data/db/ --logpath data/logs/mongodb.log --logappend --httpinterface --rest`
+    * Run `mongod --dbpath data/db/ --logpath data/logs/mongodb.log --logappend --httpinterface --rest`
 
 * In the second `GemStoreExpress` terminal prompt
 
-* Run `mongo`
+    * Run `mongo`
+
+    * To manually add an entry to the database run `db.products.insert({name: "Product 3", description: "Product 3 Description", shine: "100", price: "149.99", rarity: "150", color: "clear", faces:"6"})`
 
 * In the  `GemStoreExpress/client` terminal prompt
 
-* Run `grunt serve`
+    * Run `grunt serve`
 
-* Close the browser window that automatically opens
+    * Close the browser window that automatically opens
 
 * In the  `GemStoreExpress/server` terminal prompt
 
-* Run `npm test`
-
-* Close the browser window that automatically opens
+    * Run `npm test`
 
 
 ### Production Build

@@ -24,5 +24,4 @@ angular.module('gemStoreApp')
 				$scope.users.splice(user, 1);
 			});
 		};
-
 	}]);

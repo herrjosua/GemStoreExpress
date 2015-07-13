@@ -2,6 +2,7 @@
 
 var mongoose = require('mongoose');
 var UserModel = require('./schemas/users');
+var ProductModel = require('./schemas/products');
 
 // Connections
 var developmentDb = 'mongodb://localhost/gemStoreDb';
@@ -32,7 +33,9 @@ db.on('error', console.error.bind(console, 'connection error:'));
 
 // Open the connection
 db.once('open', function callback () {
-	console.log('Databsae Connection Successfully Opened at ' + usedDb);
+	console.log('Database Connection Successfully Opened at ' + usedDb);
 });
 
 exports.users = UserModel;
+
+exports.products = ProductModel;

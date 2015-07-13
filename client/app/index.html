@@ -24,7 +24,7 @@
 
         <!-- Add your site or application content here -->
         <div class="header">
-            <div class="navbar navbar-default" role="navigation">
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <div class="container-fluid">
                     <div class="navbar-header">
 
@@ -35,17 +35,14 @@
                             <span class="icon-bar"></span>
                         </button>
 
-                        <a class="navbar-brand" href="#/">gemStoreApp</a>
+                        <a class="navbar-brand" href="#/"><img src="images/logo.png" alt="Flatlanders Crafted Gems"></a>
                     </div>
 
-                    <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#/">Home</a></li>
-                            <li><a ng-href="#/users">Users</a></li>
-                            <li><a ng-href="#/about">About</a></li>
-                        </ul>
-                    </div>
+                    <navbar class="ng-cloak"></navbar>
+                </div>
+                <div class="container-fluid title-bar"> 
+                    <!--<breadcrumbs class="ng-cloak"></breadcrumbs>-->
+                    <div ncy-breadcrumb></div>
                 </div>
             </div>
         </div>
@@ -66,17 +63,24 @@
         <script src="src/vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
         <script src="src/vendor/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="src/vendor/angular-resource/angular-resource.js"></script>
-        <script src="src/vendor/angular-route/angular-route.js"></script>
+        <script src="src/vendor/angular-breadcrumb/release/angular-breadcrumb.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/signup.js"></script>
-        <script src="scripts/controllers/users.js"></script>
+        <script src="scripts/controllers/main/main-controller.js"></script>
+        <script src="scripts/controllers/about/about-controller.js"></script>
+        <script src="scripts/controllers/users/users-controller.js"></script>
+        <script src="scripts/controllers/products/products-controller.js"></script>
+        <script src="scripts/controllers/navbar/navbar-controller.js"></script>
+        <script src="scripts/controllers/products/products-review-controller.js"></script>
         <script src="scripts/services/users/users-service.js"></script>
+        <script src="scripts/services/products/products-service.js"></script>
+        <script src="scripts/directives/navbar/navbar-directive.js"></script>
+        <script src="scripts/directives/product-gallery/product-gallery-directive.js"></script>
+        <script src="scripts/directives/product-review/product-review-directive.js"></script>
+        <script src="scripts/directives/product-stars/product-stars-directive.js"></script>
         <!-- endbuild -->
     </body>
 </html>

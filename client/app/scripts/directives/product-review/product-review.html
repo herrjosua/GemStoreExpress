@@ -1,0 +1,35 @@
+<section class="product-reviews">
+	<h4>Reviews</h4>
+	<blockquote  ng-repeat="review in product.reviews" ng-init="rating = review.stars">
+		<product-stars rating-value="rating" max="5" readonly="isReadonly" ng-model="rating" product-data="product"></product-stars>
+		<!-- <div product-stars rating-value="rating" max="5" readonly="isReadonly" ng-model="rating" product-data="product"></div> -->
+		{{review.body}}
+		<cite>- {{review.author}} on {{review.createdOn | date}}</cite>
+	</blockquote>
+
+	<form class="form-horizontal" name="reviewForm" ng-controller="ReviewCtrl as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+		<div class="form-group" ng-class="{'has-error': reviewForm.selectStars.$invalid && !reviewForm.selectStars.$pristine,'has-sucess': reviewForm.selectStars.$valid && !reviewForm.selectStars.$pristine}">
+			<label for="selectStars" class="col-sm-2 control-label">Ranking</label>
+			<div class="col-sm-10" ng-init="rating = 0">
+				<product-stars rating-value="rating" max="5" readonly="" ng-model="reviewCtrl.review.stars" product-data="product" on-rating-selected="rateFunction(rating)"></product-stars>
+			</div>
+		</div>
+		<div class="form-group" ng-class="{'has-error': reviewForm.review.$invalid && !reviewForm.review.$pristine, 'has-success' : reviewForm.review.$valid && !reviewForm.review.$pristine}">
+			<label for="review" class="col-sm-2 control-label">Review</label>
+			<div class="col-sm-10">
+				<textarea ng-model="reviewCtrl.review.body" id="review" name="review" class="form-control" placeholder="Your Review" rows="3" required></textarea>
+			</div>
+		</div>
+		<div class="form-group"  ng-class="{'has-error': reviewForm.author.$invalid && !reviewForm.author.$pristine, 'has-success': reviewForm.author.$valid && !reviewForm.author.$pristine}">
+			<label for="author" class="col-sm-2 control-label">Author</label>
+			<div class="col-sm-10">
+				<input ng-model="reviewCtrl.review.author" type="email" class="form-control" id="author" name="author" placeholder="Author@example.com" required>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-primary" value="submit">Submit</button>
+			</div>
+		</div>
+	</form>
+</section>

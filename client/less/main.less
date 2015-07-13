@@ -3,17 +3,76 @@
 @import '../src/vendor/bootstrap-less/less/bootstrap.less';
 
 /* Importing Font Awesome LESS files */
-//@import '../src/vendor/font-awesome/less/font-awesome.less';
+@import '../src/vendor/font-awesome/less/font-awesome.less';
 
 /* Importing Custom Variables LESS files */
-
 @import 'variables.less';
 
 /* Importing Custom Styles */
 
-.signIn-widget{
+.container-fluid{
+	.row:first-child{
+		margin-top: 80px;
+	}
+}
+
+.title-bar{
+	background-color: #f5f5f5;
+	color: #000;
+
+	h1{
+		font-size: 20px;
+		margin-bottom: 0;
+		margin-top: 4px;	
+	}
+
+	.breadcrumb{
+		margin-bottom: 0;
+	}
+}
+
+.product-list{
 	.page-header{
-		margin-top:10px;
+		margin: 5px 0;
+
+		h2{
+			margin-top: 10px;
+		}
+
+		.product-price{
+			padding: 20px 0;
+		}
+	}
+}
+
+.product-gallery{
+	.thumbnail{
+		background-color: #f8f8f8;
+	}
+
+	.small-thumbnail{
+		height: 25%;
+		width: 25%;
+		cursor: pointer;
+	}
+}
+
+.product-reviews{
+	.review-list{
+		margin-left: 20px;
+		margin-bottom: 10px;
+
+		li{
+			color: #ddd;
+			text-shadow: .05em .05em #aaa;
+			font-size: 20px;
+			cursor: pointer;
+			cursor: default;
+		}
+
+		.filled{
+			color: #fd0
+		}
 	}
 }
 

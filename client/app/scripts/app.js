@@ -8,7 +8,7 @@
     *
     * Main module of the application.
 */
-angular.module('gemStoreApp', ['ngResource', 'ui.router', 'ui.bootstrap', 'gemStoreApp.usersService'])
+angular.module('gemStoreApp', ['ngResource', 'ui.router', 'ui.bootstrap', 'ncy-angular-breadcrumb', 'gemStoreApp.usersService', 'gemStoreApp.productService'])
     //for ui-router
     .config(function ($stateProvider, $urlRouterProvider) {
 
@@ -17,28 +17,59 @@ angular.module('gemStoreApp', ['ngResource', 'ui.router', 'ui.bootstrap', 'gemSt
             .state('home', {
                 url:'/home',
                 templateUrl: 'views/main.html',
-                controller: 'MainCtrl'
+                controller: 'MainCtrl',
+                ncyBreadcrumb: {
+                    label: 'Home'
+                }
             })
 
             .state('about', {
                 url:'/about',
                 templateUrl: 'views/about.html',
-                controller: 'AboutCtrl'
-            })
-
-            .state('signup', {
-                url:'/signup',
-                templateUrl: 'views/signup.html',
-                controller: 'SignupCtrl'
+                controller: 'AboutCtrl',
+                ncyBreadcrumb: {
+                    parent: 'home',
+                    label: 'About'
+                }
             })
 
             .state('users', {
                 url:'/users',
                 templateUrl: 'views/users.html',
-                controller: 'UsersCtrl'
-            });
+                controller: 'UsersCtrl',
+                ncyBreadcrumb: {
+                    parent: 'home',
+                    label: 'Users'
+                }
+            })
+
+            .state('products', {
+                url:'/products',
+                templateUrl: 'views/products.html',
+                controller: 'ProductsCtrl',
+                ncyBreadcrumb: {
+                    parent: 'home',
+                    label: 'Products'
+                }
+            })
+
+            .state('productDetails', {
+                url:'/:id',
+                templateUrl: 'views/product-detail.html',
+                controller: 'ProductDetailCtrl',
+                ncyBreadcrumb: {
+                    parent: 'products',
+                    label: '{{product.name}}'
+                }
+            }); 
 
         // For any unmatched route redirect to the root
         $urlRouterProvider.otherwise('home');
+    })
 
+    // Override of the ncuillery angular-breadcrumb plug
+    .config(function($breadcrumbProvider) {
+        $breadcrumbProvider.setOptions({
+            templateUrl: 'scripts/directives/breadcrumbs/breadcrumbs.html',
+        });
     });

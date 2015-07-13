@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+		<div class="list-group product-list">
+			<a ui-sref="productDetails({id:product._id})" class="list-group-item" ng-repeat="product in products">
+				<div class="page-header clearfix">
+					<h2 class="pull-left"><i class="fa fa-diamond"></i> {{product.name}}</h2>
+					<span class="pull-right product-price">{{product.price | currency}}</span>
+				</div>
+				{{product.description}}
+			</a>
+		</div>
+	</div>
+</div>
