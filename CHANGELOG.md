@@ -36,3 +36,10 @@
 * **Added** Imports for `mongoose` and `Product` schema in `server/router/routes/products.js`
 * **Modified** Rewrote routes for `products` in `server/router/routes/products.js`
 * **Added** New schema for `Reviews` and linked with the `Product` schema
+
+### 07/15/2015
+
+* **Modified** The template for listing products so I can add buttons at the list level
+* **Modified** LESS styles for 
+* **Modified** Bower dependencies in `READMD.md` for `client` directory
+* **Modified** Routes for a product in `server/router/routes/products.js`

@@ -92,6 +92,9 @@
 - angular-route@1.3.16 &mdash; **Note:** Will remove once angular-ui-router is properly configered
 - karma@~0.4.6
 - protractor@~2.1.0
+- angular-breadcrumb@0.4.0
+- **Dev**
+- angular-mocks@1.3.16
 
 ## Current Issues/Road Blocks
 

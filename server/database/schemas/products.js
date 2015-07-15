@@ -34,7 +34,10 @@ var productSchema = new Schema({
 		require: true,
 	},
 	images: {},
-	reviews: [{type: mongoose.Schema.Types.ObjectId, ref: 'Review'}]
+	reviews: [{type: mongoose.Schema.Types.ObjectId, ref: 'Review'}],
+	createdOn: {
+		type: Date
+	}
 });
 
 var Product = mongoose.model('Product', productSchema);

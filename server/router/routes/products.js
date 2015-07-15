@@ -20,7 +20,12 @@ router.use(function(req, res, next) {
 });
 
 // GET route for all Products
+// /products is coming from index.js
+// /products/
 router.get('/', function (req, res, next) {
+
+	console.log("GETTING all products!");
+
 	Product.find( function (err, products) {
 		if (err) {
 			return next(err);
@@ -31,7 +36,12 @@ router.get('/', function (req, res, next) {
 });
 
 // POST route for adding a Product
+// /products is coming from index.js
+// /products/
 router.post('/', function (req, res, next) {
+
+	console.log("POSTING a single product!");
+
 	var product = new Product (req.body);
 
 	product.save( function (err, post) {
@@ -43,9 +53,13 @@ router.post('/', function (req, res, next) {
 	});
 });
 
-// Pre-loading product object
+// Pre-loading product object on routes with ':product'
 router.param('product', function (req, res, next, id) {
 	var query = Product.findById(id);
+
+	console.log("Am I hitting my product param?");
+
+	console.log("QUERING the product with an id of: " + id);
 
 	query.exec( function (err, product) {
 		if (err) {
@@ -59,11 +73,40 @@ router.param('product', function (req, res, next, id) {
 		req.product = product;
 
 		return next();
+	});
+});
+
+// Pre-loading review object on routes with ':review'
+router.param('review', function (req, res, next, id) {
+	var query = Review.findById(id);
+
+	console.log("Am I hitting my review param?");
+
+	console.log("QUERING the product with an id of: " + id);
+
+
+	query.exec( function (err, review) {
+		if (err) {
+			return next(err);
+		}
+
+		if(!review) {
+			return next(new Error('can\'t find review'));
+		}
+
+		req.review = review;
+
+		return next();
 	})
 });
 
 // GET route for retrieving a single product
-router.get('/:product', function (req, res) {
+// /products is coming from index.js
+// /products/:product
+router.get('/:product', function (req, res, next) {
+
+	console.log("GETTING a single product");
+
 	req.product.populate('reviews', function (err, product) {
 		if (err) {
 			return next(err);
@@ -73,10 +116,14 @@ router.get('/:product', function (req, res) {
 	});
 });
 
-// POST route for creating a review
-router.post('/:product:reviews', function (req, res, next) {
-	var review = new Review(req.body);
+// POST route for creating a new review
+// /products is coming from index.js
+// /products/:product/reviews 
+router.post('/:product/reviews', function (req, res, next) {
 
+	console.log("POSTING a review for a product");
+
+	var review = new Review(req.body);
 	review.product = req.product;
 
 	review.save( function (err, review){
@@ -85,7 +132,7 @@ router.post('/:product:reviews', function (req, res, next) {
 		}
 
 		req.product.reviews.push(review);
-		req.product.save( function (err, review) {
+		req.product.save( function (err, product) {
 			if (err) {
 				return next(err);
 			}
@@ -94,7 +141,6 @@ router.post('/:product:reviews', function (req, res, next) {
 		});
 	});
 });
-
 
 // NOTE: Below code uses the Products variable which connects to the db.products
 

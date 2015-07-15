@@ -8,7 +8,7 @@
  * Controller of the gemStoreApp
  */
 angular.module('gemStoreApp')
-	.controller('UsersCtrl', ['$scope', '$http', 'usersService', function ($scope, $http, usersService) {
+	.controller('UsersCtrl', ['$scope', 'usersService', function ($scope, usersService) {
 		$scope.users = {};
 
 		// Gets all the users

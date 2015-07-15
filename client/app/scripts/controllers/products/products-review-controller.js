@@ -16,6 +16,8 @@ angular.module('gemStoreApp')
 
 			console.log('Product: ' + angular.toJson(product));
 
+			console.log('/'+ product._id + '/review');
+
 			console.log('posting a review to the front end!!');
 			this.review.createdOn = Date.now();
 
@@ -24,6 +26,16 @@ angular.module('gemStoreApp')
 			product.reviews.push(this.review);
 
 			console.log('Product plus review: ' + angular.toJson(product));
+
+			productsService.save(product, function() {
+				console.log("Update the server?");
+				//product.$update();
+				productsService.$update(product);
+			});
+
+			//usersService.remove({id: user._id}, function() {
+				//$scope.users.splice(user, 1);
+			//});
 
 			//product.reviews.$save();
 
