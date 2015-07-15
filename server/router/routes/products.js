@@ -142,46 +142,4 @@ router.post('/:product/reviews', function (req, res, next) {
 	});
 });
 
-// NOTE: Below code uses the Products variable which connects to the db.products
-
-//var db = require('../../database');
-//var Products = db.products;
-
-// // GET route for retrieving products
-// router.get('/', function (req, res, next) {
-// 	Products.find(function(err, products) {
-// 		if (err) {
-// 			return next(err);
-// 		}
-
-// 		res.json(products);
-// 		console.log(products);
-// 	});
-// });
-
-// // POST route for adding a new product
-// router.post('/', function (req, res, next) {
-// 	var product = new Products(req.body);
-
-// 	product.save(function(err, product) {
-// 		if(err) {
-// 			return next(err);
-// 		}
-
-// 		res.json(product);
-// 	});
-// });
-
-// //GET route for a single product
-// router.get('/:id', function (req, res) {
-// 	Products.findById(req.params.id, function(err, product) {
-// 		if (err) {
-// 			return next(err);
-// 		}
-
-// 		res.json(product);
-// 		console.log(product);
-// 	});
-// });
-
 module.exports = router;

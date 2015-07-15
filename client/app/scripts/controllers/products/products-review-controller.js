@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc function
- * @name gemStoreApp.controller:ProductsCtrl
+ * @name gemStoreApp.controller:ReviewCtrl
  * @description
- * # ProductsCtrl
+ * # ReviewCtrl
  * Controller of the gemStoreApp
  */
 angular.module('gemStoreApp')
@@ -32,24 +32,6 @@ angular.module('gemStoreApp')
 				//product.$update();
 				productsService.$update(product);
 			});
-
-			//usersService.remove({id: user._id}, function() {
-				//$scope.users.splice(user, 1);
-			//});
-
-			//product.reviews.$save();
-
-			//this.review.$save();
-
-			//var Product = $resource('/products/:productId', {productId: product_.id});
-			//var product = Product.get({productId: product._id}, function () {
-				//product.$save(this.review);
-			//})
-
-			//productsService.save({id: product._id}, function() {
-				//product.$save();
-				//this.review.splice(product, 1);
-			//});
 
 			this.review = {};
 		};
