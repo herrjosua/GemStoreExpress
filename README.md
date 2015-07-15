@@ -5,12 +5,12 @@
 * Email: Josh@JoshuaBock.com
 * URL: [Portfolio Website](joshuabock.com)
 * Description:  AngularJS Project based off the following projects
-    * [Shaping up with AngularJS](https://www.codeschool.com/courses/shaping-up-with-angular-js/ "Shaping up with AngularJS")
-    * [Yeoman](http://yeoman.io/codelab.html/ "Yeoman Tutorial")
-    * [Building an Angular & Express App &mdash; Part 1](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-1/ "Building an Eangular & Express App &mdash; Part 1")
-    * [Building an Angular & Express App &mdash; Part 2](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App &mdash; Part 2")
-    * [Building an Angular & Express App &mdash; Part 3](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-3/ "Building an Eangular & Express App &mdash; Part 3")
-    * [Mean-Stack Tutorial &mdash; Adding Authentication via Passport](https://thinkster.io/mean-stack-tutorial/ "Mean-Stack Tutorial &mdash; Adding Authentication via Passport")
+* [Shaping up with AngularJS](https://www.codeschool.com/courses/shaping-up-with-angular-js/ "Shaping up with AngularJS")
+* [Yeoman](http://yeoman.io/codelab.html/ "Yeoman Tutorial")
+* [Building an Angular & Express App &mdash; Part 1](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-1/ "Building an Eangular & Express App &mdash; Part 1")
+* [Building an Angular & Express App &mdash; Part 2](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App &mdash; Part 2")
+* [Building an Angular & Express App &mdash; Part 3](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-3/ "Building an Eangular & Express App &mdash; Part 3")
+* [Mean-Stack Tutorial &mdash; Adding Authentication via Passport](https://thinkster.io/mean-stack-tutorial/ "Mean-Stack Tutorial &mdash; Adding Authentication via Passport")
 
 ## Project Dependencies
 
@@ -26,7 +26,7 @@
 - Express version: `2.12.1`
 - **Client**
 - grunt@0.4.5
-- ~~grunt-autoprefixer@2.2.0~~ &mdash; **Note:**  Being Deprecated use grunt-postcss instead *(Already included)*
+- ~grunt-autoprefixer@2.2.0~~ &mdash; **Note:**  Being Deprecated use grunt-postcss instead *(Already included)*
 - grunt-concurrent@1.0.1
 - grunt-connect-proxy@0.2.0
 - grunt-contrib-clean@0.6.0
@@ -61,14 +61,23 @@
 - phantomjs@1.9.17
 - time-grunt@1.2.1
 - **Server**
+- bcrypt@0.8.3
 - body-parser@1.0.2
+- cli-color@1.0.0
 - cookie-parser@1.0.1
-- debug@0.7.4 
-- express@4.0.0 
-- jade@1.3.1 
-- morgan@1.0.1 
+- debug@0.7.4
+- express@4.0.0
+- express-jwt@3.0.1
+- jsonwebtoken@5.0.2
+- moment@2.10.3
+- mongoose@4.0.6
+- morgan@1.0.1
+- npmlog@1.2.1
+- passport@0.2.2
+- passport-local@1.0.0
 - serve-favicon@2.3.0 &mdash; **Note:** Being Deprecated use static-favicon instead (Already included)
-- static-favicon@2.0.0
+- static-favicon@2.0.0-alpha
+- underscore@1.8.3
 
 ### Bower.json
 
@@ -122,23 +131,23 @@
 
 * In the first `GemStoreExpress` terminal prompt
 
-    * Run `mongod --dbpath data/db/ --logpath data/logs/mongodb.log --logappend --httpinterface --rest`
+* Run `mongod --dbpath data/db/ --logpath data/logs/mongodb.log --logappend --httpinterface --rest`
 
 * In the second `GemStoreExpress` terminal prompt
 
-    * Run `mongo`
+* Run `mongo`
 
-    * To manually add an entry to the database run `db.products.insert({name: "Product 3", description: "Product 3 Description", shine: "100", price: "149.99", rarity: "150", color: "clear", faces:"6"})`
+* To manually add an entry to the database run `db.products.insert({name: "Product 3", description: "Product 3 Description", shine: "100", price: "149.99", rarity: "150", color: "clear", faces:"6"})`
 
 * In the  `GemStoreExpress/client` terminal prompt
 
-    * Run `grunt serve`
+* Run `grunt serve`
 
-    * Close the browser window that automatically opens
+* Close the browser window that automatically opens
 
 * In the  `GemStoreExpress/server` terminal prompt
 
-    * Run `npm test`
+* Run `npm test`
 
 
 ### Production Build

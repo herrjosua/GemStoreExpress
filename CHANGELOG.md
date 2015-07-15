@@ -1,3 +1,4 @@
+
 # GemStoreExpress
 * Git repository: [GemStoreExpress](https://github.com/herrjosua/GemStoreExpress.git)
 * Author: Joshua Bock
@@ -10,6 +11,7 @@
     * [Building an Angular & Express App &mdash; Part 2](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App &mdash; Part 2")
     * [Building an Angular & Express App &mdash; Part 3](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-3/ "Building an Eangular & Express App &mdash; Part 3")
     * [Mean-Stack Tutorial &mdash; Adding Authentication via Passport](https://thinkster.io/mean-stack-tutorial/ "Mean-Stack Tutorial &mdash; Adding Authentication via Passport")
+
 
 ## Change Log
 
