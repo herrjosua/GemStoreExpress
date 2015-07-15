@@ -1,5 +1,5 @@
 /**
- * Our Schema for Users
+ * Schema for Users
  */
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');

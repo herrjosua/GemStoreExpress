@@ -1,4 +1,4 @@
-// This handles retrieving the list of users
+// This handles retrieving of users
 
 // Includes Express
 var express = require('express');
@@ -15,7 +15,6 @@ var Users = db.users;
 // Route middleware
 router.use(function(req, res, next) {
 	console.log("Something is happening in users!!");
-
 	next();
 });
 
@@ -96,7 +95,7 @@ router.post('/', function (req,res) {
 });
 
 // GET route for retrieving users
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
 	Users.find(function(err, users) {
 		if (err) {
 			return next(err);
@@ -127,7 +126,7 @@ router.param('/', function(req, res, next, id) {
 });
 
 // GET route for a single user
-router.get('/:id', function(req, res) {
+router.get('/:id', function (req, res) {
 	Users.findById(req.params.id, function(err, user) {
 		if (err) {
 			return next(err);
@@ -139,7 +138,7 @@ router.get('/:id', function(req, res) {
 });
 
 // DELETE route for a single user
-router.delete('/:id', function(req, res) {
+router.delete('/:id', function (req, res) {
 
 	Users.findByIdAndRemove(req.params.id, req.body, function (err, user) {
 		if (err) {

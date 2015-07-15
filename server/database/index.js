@@ -3,6 +3,7 @@
 var mongoose = require('mongoose');
 var UserModel = require('./schemas/users');
 var ProductModel = require('./schemas/products');
+var ReviewModel = require('./schemas/reviews');
 
 // Connections
 var developmentDb = 'mongodb://localhost/gemStoreDb';
@@ -39,3 +40,5 @@ db.once('open', function callback () {
 exports.users = UserModel;
 
 exports.products = ProductModel;
+
+exports.reviews = ReviewModel;

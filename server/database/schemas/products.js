@@ -1,5 +1,5 @@
 /**
- * Our Schema for Products
+ * Schema for Products
  */
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
@@ -33,32 +33,9 @@ var productSchema = new Schema({
 		type: Number,
 		require: true,
 	},
-	images: {
-
-	},
-	reviews: {
-		stars: {
-			type: Number,
-			require: true,
-		},
-		review: {
-			type: String,
-			require: true,
-		},
-		author: {
-			type: String,
-			require: true,
-		},
-		createdOn: {
-			type: Date,
-			require: true,
-		}
-	}
+	images: {},
+	reviews: [{type: mongoose.Schema.Types.ObjectId, ref: 'Review'}]
 });
-
-//productSchema.pre('save', function (next) {
-
-//});
 
 var Product = mongoose.model('Product', productSchema);
 

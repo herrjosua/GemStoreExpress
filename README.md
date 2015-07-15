@@ -5,12 +5,12 @@
 * Email: Josh@JoshuaBock.com
 * URL: [Portfolio Website](joshuabock.com)
 * Description:  AngularJS Project based off the following projects
-* [Shaping up with AngularJS](https://www.codeschool.com/courses/shaping-up-with-angular-js/ "Shaping up with AngularJS")
-* [Yeoman](http://yeoman.io/codelab.html/ "Yeoman Tutorial")
-* [Building an Angular & Express App &mdash; Part 1](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-1/ "Building an Eangular & Express App &mdash; Part 1")
-* [Building an Angular & Express App &mdash; Part 2](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App &mdash; Part 2")
-* [Building an Angular & Express App &mdash; Part 3](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-3/ "Building an Eangular & Express App &mdash; Part 3")
-* [Mean-Stack Tutorial &mdash; Adding Authentication via Passport](https://thinkster.io/mean-stack-tutorial/ "Mean-Stack Tutorial &mdash; Adding Authentication via Passport")
+    * [Shaping up with AngularJS](https://www.codeschool.com/courses/shaping-up-with-angular-js/ "Shaping up with AngularJS")
+    * [Yeoman](http://yeoman.io/codelab.html/ "Yeoman Tutorial")
+    * [Building an Angular & Express App &mdash; Part 1](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-1/ "Building an Eangular & Express App &mdash; Part 1")
+    * [Building an Angular & Express App &mdash; Part 2](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App &mdash; Part 2")
+    * [Building an Angular & Express App &mdash; Part 3](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-3/ "Building an Eangular & Express App &mdash; Part 3")
+    * [Mean-Stack Tutorial &mdash; Adding Authentication via Passport](https://thinkster.io/mean-stack-tutorial/ "Mean-Stack Tutorial &mdash; Adding Authentication via Passport")
 
 ## Project Dependencies
 
@@ -86,6 +86,7 @@
 
 ## Current Issues/Road Blocks
 
+* Need to figure out how to save a comment to the server
 
 ## Latest Status
 
@@ -94,9 +95,9 @@
 
 * ~~Add passport for authentication~~
 * ~~Add additional products via database terminal~~
-* Create add products modal
+* Create add products modal &mdash; added router for adding products
 * Finish up Product Details
-* ~~Restore navbar from previous GemStore project!!
+* ~~Restore navbar from previous GemStore project!!~~
 
 ## Installation Instructions
 
