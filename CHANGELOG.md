@@ -37,9 +37,40 @@
 * **Modified** Rewrote routes for `products` in `server/router/routes/products.js`
 * **Added** New schema for `Reviews` and linked with the `Product` schema
 
-### 07/15/2015
+### 07/15/2015 07/16/2015 & 07/17/2015
 
 * **Modified** The template for listing products so I can add buttons at the list level
-* **Modified** LESS styles for 
+* **Modified** LESS styles for `product-list` class
 * **Modified** Bower dependencies in `READMD.md` for `client` directory
+* **Modified/Added** Bower dependency for `angular-breadcrumb`
 * **Modified** Routes for a product in `server/router/routes/products.js`
+* **Modified** Renamed the `ModalCtrl` to `CreateUserModalCtrl` & `ModelInstanceCtrl` to `CreateUserModalInstanceCtrl` in `/client/app/scripts/controller/main/main-controller.js` 
+* **Added** New files `CreateUserModalCtrl` & `CreateUserModalInstanceCtrl` within the `client/app/scripts/controllers/users/` directory
+* **Modified** Moved the `CreateUserModalCtrl` & `CreateUserModalInstanceCtrl` controllers to the newly created files
+* **Modified** The following files by adding a Immediately Invoke Function Expression (IIFE) per the [Angular Styleguide](https://www.github.com/johnpapa/angular-styleguide "Angular Styleguide") by John Papa
+    * `/client/app/scripts/controllers/about/about-controller.js`})
+    * `/client/app/scripts/controllers/main/main-controller.js`
+    * `/client/app/scripts/controllers/navbar/navbar-controller.js`
+    * `/client/app/scripts/controllers/products/product-detauls-controller.js`
+    * `/client/app/scripts/controllers/products/products-controller.s`
+    * `/client/app/scripts/controllers/products/products-review-controller.js`
+    * `/client/app/scripts/directives/navbar/navbar-directive.js`
+    * `/client/app/scripts/directives/product-gallery/product-gallery-directive.js`
+    * `/client/app/scripts/directives/product-review/product-review-directive.js`
+    * `/client/app/scripts/directives/product-stars/product-stars-directive.js`
+    * `/client/app/scripts/services/products/products-service.js`
+    * `/client/app/scripts/services/users/users-service.js`
+* **Note** `/client/app/scripts/app.js` does not need a IIFE per jshint warnings: `Wrapping non-IIFE function literals in parens is unnecessary.` & `Expected an assignment or function call and instead saw an expression.`
+* **Modified/Added** A `update` method to my `productsService` in `/client/app/scripts/services/products/product-service.js` & added `id: '@id'`
+* **Modified** The name of `gemStoreApp.usersService` to `gemStoreApp.userService` in `/client/app/scripts/services/users/users-service.js`
+* **Added** New html markup with `ng-click` attribute for `addProduct()` for an `Add Product` button to `client/app/views/products.html`
+* **Added** New method in the `ProductsCtrl` in `/client/app/scripts/controllers/products/product-controller.js` for `addProduct` to add hardcoded product to the front-end and back-end. 
+* **Modified/Added** The `ProductsCtrl` in `/client/app/scripts/controllers/products/product-controller.js` by removing up the Dependecy Injection by removing the `$http` and the `$state` calls, and by removing the `ProductDetailCtrl` to a new file in `/client/app/scripts/controllers/products/`
+* **Modified** The remove method in the `UsersCtrl` in `/client/app/scripts/controllers/users/users-controller.js` to use the `usersService` instead of the `$http` call, and by removing the Dependecy Injection by removing the `$http` call
+* **Modified** The schema for `products` by adding a `createdOn` attribute in `/server/database/schemas/products.js`
+* **Modified** Comments for the products routes in `/server/router/routes/products.js`
+* **Modified** Changed the order of the main nav by moving the `users` menu item as the last item
+* **Modified/Added** markup for `/client/app/index.html` by adding newly created controllers
+* **Modified** markup for `/client/app/views/products.html`
+
+    

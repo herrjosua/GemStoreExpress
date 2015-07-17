@@ -8,9 +8,6 @@ var db = require('./database');
 
 var app = express();
 
-//var mongoose = require('mongoose');
-//console.log("mongoose status: " + mongoose.connection.readyState);
-
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));

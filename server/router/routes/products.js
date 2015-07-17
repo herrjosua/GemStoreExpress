@@ -119,7 +119,7 @@ router.get('/:product', function (req, res, next) {
 // POST route for creating a new review
 // /products is coming from index.js
 // /products/:product/reviews 
-router.post('/:product/reviews', function (req, res, next) {
+router.post('/:product/comment', function (req, res, next) {
 
 	console.log("POSTING a review for a product");
 

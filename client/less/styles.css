@@ -8378,15 +8378,6 @@ button.close {
 .product-list .page-header .product-price {
   padding: 20px 0;
 }
-.product-list .list-group-item .page-header {
-  margin: 5px 0;
-}
-.product-list .list-group-item .page-header h2 {
-  margin-top: 10px;
-}
-.product-list .list-group-item .page-header .product-price {
-  padding: 20px 0;
-}
 .product-gallery .thumbnail {
   background-color: #f8f8f8;
 }
