@@ -1,6 +1,9 @@
 <div class="row">
-	<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 clearfix">
-		<span class="pull-right"><a href="#" class="btn btn-primary" ng-click="addProduct()">Add Product</a></span>
+	<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 product-filters clearfix">
+		<span class="pull-right" ng-controller="CreateProductModalCtrl">
+			<button class="btn btn-primary" ng-click="open()">Add Product <i class="fa fa-sign-in"></i></button>
+			<a href="#" class="btn btn-primary" ng-click="addProduct()">Add Product</a>
+		</span>
 	</div>
 	<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
 		<div class="list-group product-list">

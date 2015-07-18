@@ -22,8 +22,6 @@
             };
 
             $scope.submit = function () {
-                console.log('I wanna submit this form!!');
-
                 if (!user.firstName || !user.lastName || !user.email || !user.pwd || !user.confirmPwd) {
                     console.log('Please fill out all form fields.');
                     return false;
@@ -31,12 +29,9 @@
 
                 // make sure the passwords match match
                 if (user.pwd !== user.confirmPwd) {
-                    //alert('Your passwords must match.');
                     console.log('Your passwords must match.');
                     return false;
                 }
-
-                console.log(user);
 
                 // Make the request to the server ... which doesn't exist just yet
                 var request = $http.post('/users', user);

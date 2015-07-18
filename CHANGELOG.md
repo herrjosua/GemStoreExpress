@@ -37,7 +37,7 @@
 * **Modified** Rewrote routes for `products` in `server/router/routes/products.js`
 * **Added** New schema for `Reviews` and linked with the `Product` schema
 
-### 07/15/2015 07/16/2015 & 07/17/2015
+### 07/15/2015 07/16/2015 & 07/17/2015 - Pre 14:00 commit
 
 * **Modified** The template for listing products so I can add buttons at the list level
 * **Modified** LESS styles for `product-list` class
@@ -72,5 +72,12 @@
 * **Modified** Changed the order of the main nav by moving the `users` menu item as the last item
 * **Modified/Added** markup for `/client/app/index.html` by adding newly created controllers
 * **Modified** markup for `/client/app/views/products.html`
+
+### 07/17/2015 - post 14:00 commit
+
+* **Added** `modal-product-controller.js` and `modal-product-instance-controller.js` to `/client/app/scripts/controllers/products` directory
+* **Copied/Modified** code from `/client/app/scripts/controllers/users/modal-signup-controller.js` and `/client/app/scripts/controllers/users/modal-signup-instance-controller.js` to `/client/app/scripts/controllers/products/modal-product-controller.js` and `/client/app/scripts/controllers/products/modal-product-instance-controller.js`
+* **Modified** the add product buttom to call the product modal
+* **Modified/Added** submit method for the `/client/app/scripts/controllers/products/modal-product-instance-controller.js` to add a new custom product to the server
 
     

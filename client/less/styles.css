@@ -8369,6 +8369,9 @@ button.close {
 .title-bar .breadcrumb {
   margin-bottom: 0;
 }
+.product-filters {
+  margin-bottom: 15px;
+}
 .product-list .page-header {
   margin: 5px 0;
 }

@@ -3,20 +3,23 @@
 
     /**
         * @ngdoc function
-        * @name gemStoreApp.controller:CreateUserModalCtrl
+        * @name gemStoreApp.controller:CreateProductModalCtrl
         * @description
-        * # CreateUserModalCtrl
+        * # CreateProductModalCtrl
         * Controller of the gemStoreApp
     */
 
     angular.module('gemStoreApp')
-    	.controller('CreateUserModalCtrl', ['$scope', '$modal', '$log', function ($scope, $modal, $log) {
-            $scope.user = {
-                firstname: '',
-                lastname: '',
-                email: '',
-                pwd: '',
-                pwdConfirm: ''
+    	.controller('CreateProductModalCtrl', ['$scope', '$modal', '$log', function ($scope, $modal, $log) {
+            $scope.product = {
+                name: '',
+                description: '',
+                shine: '',
+                price: '',
+                rarity: '',
+                color: '',
+                faces: '',
+                createdOn: Date.now(),
             };
 
             $scope.animationsEnabled = true;
@@ -26,18 +29,18 @@
                 var modalInstance = $modal.open({
                     animation: $scope.animationsEnabled,
                     backdrop: true,
-                    templateUrl: '../../views/modal-signup.html',
-                    controller: 'CreateUserModalInstanceCtrl',
+                    templateUrl: '../../views/modal-product.html',
+                    controller: 'CreateProductModalInstanceCtrl',
                     resolve: {
-                        user: function () {
-                            return $scope.user;
+                        product: function () {
+                            return $scope.product;
                         }
                     }
                 });
 
                 modalInstance.result.then(function () {
                     $log.info('Modal dismissed at: ' + new Date());
-                    $scope.user = '';
+                    $scope.product = '';
                 });
             };
 

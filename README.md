@@ -98,18 +98,7 @@
 
 ## Current Issues/Road Blocks
 
-* Need to figure out how to save a comment to the server
-
-## Latest Status
-
-
-## Todo
-
-* ~~Add passport for authentication~~
-* ~~Add additional products via database terminal~~
-* Create add products modal &mdash; added router for adding products
-* Finish up Product Details
-* ~~Restore navbar from previous GemStore project!!~~
+* Need to figure out how update the front-end the add product modal, like how I do for the hard coded add product
 
 ## Installation Instructions
 

@@ -19,8 +19,8 @@
 				// Creating a new product
 				$scope.product = new productsService();
 
-				$scope.product.name = 'Product 2';
-				$scope.product.description = 'Product 2 description';
+				$scope.product.name = 'Product 3';
+				$scope.product.description = 'Product 3 description';
 				$scope.product.shine = 8;
 				$scope.product.price = 110.50;
 				$scope.product.rarity = 7;
@@ -33,8 +33,9 @@
 
 				//Saves the new product to the back-end
 				$scope.product.$save(function() {
+					console.log("Saving using my service within my ProductsCtrl")
 					//$state('products');
-				})
+				});
 			};
 
 		}]);
