@@ -40,6 +40,10 @@
 
                 modalInstance.result.then(function () {
                     $log.info('Modal dismissed at: ' + new Date());
+
+                    //Adds the product to the top of the list
+                    $scope.products.unshift($scope.product);
+
                     $scope.product = '';
                 });
             };

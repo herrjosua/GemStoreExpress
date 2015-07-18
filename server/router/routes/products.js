@@ -42,6 +42,44 @@ router.post('/', function (req, res, next) {
 
 	console.log("POSTING a single product!");
 
+	// var body = req.body;
+
+	// Product.findOne({
+	// 	'name': body.name
+	// }, function (err, product) {
+
+	// 	if (err) {
+	// 		// Nice log message on your end, so that you can see what happened
+	// 		console.log('Couldn\'t create new product at ' + color.red(time) + ' by ' + color.red(body.email) + ' because of: ' + err);
+
+	// 		// send the error
+	// 		res.status(500).json({
+	// 			'message': 'Internal server error from creating a new product. Please contact support@yourproject.com.'
+	// 		});
+	// 	}
+
+	// 	if(!product) {
+	// 		var product = new Product (req.body);
+
+	// 		product.save( function (err, post) {
+	// 			if(err) {
+	// 				return next(err);
+	// 			}
+
+	// 			res.json(product);
+	// 		});
+	// 	}
+
+	// 	if (product) {
+	// 		console.log('Product ' + color.red(body.email) + ' already exists.');
+
+
+	// 		res.status(409).json({
+	// 			'message': body.name + ' already exists!'
+	// 		});
+	// 	}
+	// });
+
 	var product = new Product (req.body);
 
 	product.save( function (err, post) {

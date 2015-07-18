@@ -80,4 +80,11 @@
 * **Modified** the add product buttom to call the product modal
 * **Modified/Added** submit method for the `/client/app/scripts/controllers/products/modal-product-instance-controller.js` to add a new custom product to the server
 
+### 07/18/2015
+
+* **Modified** `/client/app/scripts/controllers/products/modal-product-controller.js` to inset the new product to the front-end after the add product modal is closed
+* **Modified** `/client/app/scripts/controllers/products/modal-product-instance-controller.js` by removing unnecessary/commented code
+* **Modified** Removed the HTML markup used to add the hardcoded product in `/client/app/views/products.html`
+* **Modified** Removed the addProduct method from the `ProductsCtrl` in `/client/app/scripts/controllers/products/products-controller.js`
+* **Modified** `/server/router/routes/products.js` by adding a method to check if a product already exists by comparing the product name to the product names in the database. This code is commented out, still working on resolving an issue where if an error occurs, I am unable to submit the form with corrected data,
     

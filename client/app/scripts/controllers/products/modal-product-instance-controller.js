@@ -29,10 +29,7 @@
                 }
 
                 productsService.save({},product, function() {
-                    $scope.products = productsService.query();
-                    //$scope.products.unshift(product);
                     $modalInstance.close();
-
                 });
             };
         }]);
