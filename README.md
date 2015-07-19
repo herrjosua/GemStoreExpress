@@ -10,7 +10,52 @@
 * [Building an Angular & Express App &mdash; Part 1](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-1/ "Building an Eangular & Express App &mdash; Part 1")
 * [Building an Angular & Express App &mdash; Part 2](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-2/ "Building an Eangular & Express App &mdash; Part 2")
 * [Building an Angular & Express App &mdash; Part 3](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-3/ "Building an Eangular & Express App &mdash; Part 3")
-* [Mean-Stack Tutorial &mdash; Adding Authentication via Passport](https://thinkster.io/mean-stack-tutorial/ "Mean-Stack Tutorial &mdash; Adding Authentication via Passport")
+* [Mean-Stack Tutorial](https://thinkster.io/mean-stack-tutorial/ "Mean-Stack Tutorial")
+
+
+## Current Issues/Road Blocks
+
+## Tutorial
+
+### Install prerequisites
+
+* Node v0.10.x+ &mdash; To install go to [NodeJS website](https://nodejs.org/download/ "NodeJS") and download/install the appropriate version for your OS.
+
+* npm v2.1.0+ &mdash; To install type `npm install -g`
+
+* git &mdash; To install go to [Git website](http://git-scm.com/downloads/ "Git website") and download/install the appropriate version for your OS.
+
+* Mongodb &mdash; To install go to [Install MongoDB](http://docs.mongodb.org/manual/installation/ "Install MongoDB") and download/install the appropriate version for your OS
+
+* Yeoman &mdash; To install type `npm yo -g`
+
+* Grunt CLI &mdash; To install type `npm grunt-cli -g`
+
+* Bower &mdash; To install type `npm bower -g`
+
+### Project Setup
+
+* Install The Yeoman Generator Angular by typing `npm install generator-angular -g`
+
+* Install Express by typing `npm install express-generator -g`
+
+* Install Express Generator by typing `npm install express-generator -g`
+
+### Project Directory Structure
+
+**Notes**: This project has been tested with the versions listed in the Project Dependencies section below
+
+* Create a project directory `$ mkdir gemStoreApp && cd gemStoreApp`
+
+* Create a `/client` directory within the `gemStoreApp` directory by typing `$ mkdir client`
+
+* Create a `/server` directory within the `gemStoreApp` directory by typing `$ mkdir server`
+
+### Scaffold out your app using the Yeoman Generator Angular
+
+* Change directory to the `/client` directory
+
+* Type `yo angular` to run the generator
 
 ## Project Dependencies
 
@@ -18,7 +63,7 @@
 
 - **General**
 - NPM version: Tested with `2.12.1` 
-- Node version:  At least version `0.10.0`. Tested with `0.12.0`
+- Node version:  At least version `0.10.0`. Tested with `0.12.5`
 - Yeoman version: `1.4.7`
 - Bower version: `1.4.1`
 - Grunt version: `0.4.5`
@@ -96,18 +141,17 @@
 - **Dev**
 - angular-mocks@1.3.16
 
-## Current Issues/Road Blocks
-
-* Need to figure out how update the front-end the add product modal, like how I do for the hard coded add product
-
-## Installation Instructions
-
-**Note**:  Steps below are deviations from the steps provided in the tutorials above
-
-
 ## Build Notes
 
 **Notes**: Please see `README.md` in the `GemStoreExpress/server` directory for instructions on how to configure to run on Windows & OS X operating systems. Please see `README.md`  in the `GemStoreExpress/client` directory for Build notes
+
+### Intitial Build
+
+* Checkout code from my GitHub repo
+
+* Run `bower install` & `npm install` in the `/client/` directory
+
+* Run `npm install` in the `/server/` directory
 
 ### Development Build
 
