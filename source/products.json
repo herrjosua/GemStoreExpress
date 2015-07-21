@@ -7,11 +7,7 @@
 		"rarity": 7,
 		"color": "#CCC",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif"
-		],
+		"images": [],
 		"reviews": []
 	},
 	{
@@ -22,11 +18,7 @@
 		"rarity": 7,
 		"color": "#CCC",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif"
-		],
+		"images": [],
 		"reviews": []
 	},
 	{
@@ -37,12 +29,7 @@
 		"rarity": 12,
 		"color": "#FFF",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif",
-			"/images/gem-07.gif"
-		],
+		"images": [],
 		"reviews": []
 	},
 	{
@@ -53,31 +40,8 @@
 		"rarity": 7,
 		"color": "#EEE",
 		"faces": 12,
-		"images": [
-			"/images/gem-01.gif",
-			"/images/gem-02.gif",
-			"/images/gem-03.gif"
-		],
-		"reviews": [
-			{
-				"stars": 3,
-				"body": "I think this gem was just OK, could honestly use more shine, IMO.",
-				"author": "JimmyDean@sausage.com",
-				"createdOn": 1397490980837
-			},
-			{
-				"stars": 5,
-				"body": "AWESOME!!!!",
-				"author": "JimmyDoe@example.com",
-				"createdOn": 1397490980837
-			},
-			{
-				"stars": 4,
-				"body": "Any gem with 12 faces for me!.",
-				"author": "gemRock@alyssaNicoll.com",
-				"createdOn": 1397490980837
-			}
-		]
+		"images": [],
+		"reviews": []
 	},
 	{
 		"name": "Chambersite",
@@ -87,22 +51,8 @@
 		"rarity": 2,
 		"color": "#000",
 		"faces": 6,
-		"images": [
-			"/images/gem-04.gif",
-			"/images/gem-05.gif",
-			"/images/gem-06.gif",
-			"/images/gem-01.gif",
-			"/images/gem-02.gif",
-			"/images/gem-03.gif"
-		],
-		"reviews": [
-			{
-				"stars": 3,
-				"body": "I think this gem was just OK, could honestly use more shine, IMO.",
-				"author": "JimmyDean@sausage.com",
-				"createdOn": 1397490980837
-			}
-		]
+		"images": [],
+		"reviews": []
 	},
 	{
 		"name": "Taaffeite",
@@ -112,11 +62,7 @@
 		"rarity": 7,
 		"color": "#CCC",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif"
-		],
+		"images": [],
 		"reviews": []
 	},
 	{
@@ -127,12 +73,7 @@
 		"rarity": 12,
 		"color": "#FFF",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif",
-			"/images/gem-07.gif"
-		],
+		"images": [],
 		"reviews": []
 	},
 	{
@@ -143,31 +84,8 @@
 		"rarity": 7,
 		"color": "#EEE",
 		"faces": 12,
-		"images": [
-			"/images/gem-01.gif",
-			"/images/gem-02.gif",
-			"/images/gem-03.gif"
-		],
-		"reviews": [
-			{
-				"stars": 3,
-				"body": "I think this gem was just OK, could honestly use more shine, IMO.",
-				"author": "JimmyDean@sausage.com",
-				"createdOn": 1397490980837
-			},
-			{
-				"stars": 5,
-				"body": "AWESOME!!!!",
-				"author": "JimmyDoe@example.com",
-				"createdOn": 1397490980837
-			},
-			{
-				"stars": 4,
-				"body": "Any gem with 12 faces for me!.",
-				"author": "gemRock@alyssaNicoll.com",
-				"createdOn": 1397490980837
-			}
-		]
+		"images": [],
+		"reviews": []
 	},
 	{
 		"name": "Poudretteite",
@@ -177,22 +95,8 @@
 		"rarity": 2,
 		"color": "#000",
 		"faces": 6,
-		"images": [
-			"/images/gem-04.gif",
-			"/images/gem-05.gif",
-			"/images/gem-06.gif",
-			"/images/gem-01.gif",
-			"/images/gem-02.gif",
-			"/images/gem-03.gif"
-		],
-		"reviews": [
-			{
-				"stars": 3,
-				"body": "I think this gem was just OK, could honestly use more shine, IMO.",
-				"author": "JimmyDean@sausage.com",
-				"createdOn": 1397490980837
-			}
-		]
+		"images": [],
+		"reviews": []
 	},
 	{
 		"name": "Serendibite",
@@ -202,11 +106,7 @@
 		"rarity": 7,
 		"color": "#CCC",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif"
-		],
+		"images": [],
 		"reviews": []
 	},
 	{
@@ -217,12 +117,7 @@
 		"rarity": 12,
 		"color": "#FFF",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif",
-			"/images/gem-07.gif"
-		],
+		"images": [],
 		"reviews": []
 	},
 	{
@@ -233,12 +128,7 @@
 		"rarity": 12,
 		"color": "#FFF",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif",
-			"/images/gem-07.gif"
-		],
+		"images": [],
 		"reviews": []
 	},
 	{
@@ -249,12 +139,7 @@
 		"rarity": 12,
 		"color": "#FFF",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif",
-			"/images/gem-07.gif"
-		],
+		"images": [],
 		"reviews": []
 	},
 	{
@@ -265,12 +150,7 @@
 		"rarity": 12,
 		"color": "#FFF",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif",
-			"/images/gem-07.gif"
-		],
+		"images": [],
 		"reviews": []
 	},
 	{
@@ -281,12 +161,7 @@
 		"rarity": 12,
 		"color": "#FFF",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif",
-			"/images/gem-07.gif"
-		],
+		"images": [],
 		"reviews": []
 	},
 	{
@@ -297,12 +172,7 @@
 		"rarity": 12,
 		"color": "#FFF",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif",
-			"/images/gem-07.gif"
-		],
+		"images": [],
 		"reviews": []
 	},
 	{
@@ -313,12 +183,7 @@
 		"rarity": 12,
 		"color": "#FFF",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif",
-			"/images/gem-07.gif"
-		],
+		"images": [],
 		"reviews": []
 	},
 	{
@@ -329,12 +194,7 @@
 		"rarity": 12,
 		"color": "#FFF",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif",
-			"/images/gem-07.gif"
-		],
+		"images": [],
 		"reviews": []
 	},
 	{
@@ -345,12 +205,7 @@
 		"rarity": 12,
 		"color": "#FFF",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif",
-			"/images/gem-07.gif"
-		],
+		"images": [],
 		"reviews": []
 	},{
 		"name": "Jade",
@@ -360,12 +215,7 @@
 		"rarity": 12,
 		"color": "#FFF",
 		"faces": 14,
-		"images": [
-			"/images/gem-02.gif",
-			"/images/gem-05.gif",
-			"/images/gem-09.gif",
-			"/images/gem-07.gif"
-		],
+		"images": [],
 		"reviews": []
 	}
 ]

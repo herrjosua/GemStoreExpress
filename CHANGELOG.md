@@ -86,5 +86,19 @@
 * **Modified** `/client/app/scripts/controllers/products/modal-product-instance-controller.js` by removing unnecessary/commented code
 * **Modified** Removed the HTML markup used to add the hardcoded product in `/client/app/views/products.html`
 * **Modified** Removed the addProduct method from the `ProductsCtrl` in `/client/app/scripts/controllers/products/products-controller.js`
-* **Modified** `/server/router/routes/products.js` by adding a method to check if a product already exists by comparing the product name to the product names in the database. This code is commented out, still working on resolving an issue where if an error occurs, I am unable to submit the form with corrected data,
+* **Modified** `/server/router/routes/products.js` by adding a method to check if a product already exists by comparing the product name to the product names in the database. This code is commented out, still working on resolving an issue where if an error occurs, I am unable to submit the form with corrected data.
+
+### 07/19/2015
+
+* **Modified** README.md with instructions on how to build project, and updated the server README.md with updated instructions for a Windows user.
+
+### 07/20/2015
+
+* **Modified** `/client/app/scripts/controllers/products/product-details-controllerjs` by updating the comment to reflect the controller's name
+* **Modified** `/client/app/scripts.conntrollers/products/modal-product-instance-controller.js` the save method call to post to the correct url
+* **Modified** `/server/router/routes/products.js` by adding variables that access the database, the Products.findOut method
+* **Modified** `/server/router/routes/users.js` by restoring the title comment
+* **Modified** `/source/products.json` by removing the image and reviews arrays
+* **Added**  `/client/app/scripts/controllers/products/products-pagination-controller.js`, `/client/app/scripts/directives/product-pagination/product-pagination-directive.js`, `/client/app/scripts/directives/product-pagination/pagination-count.html`,`/client/app/scripts/directives/search/search-directive.js`,`/client/app/scripts/directives/search/search.html`
+* **Modified** Removed comments from `/server/router/routes/products.js` and `/server/router/routes/users.js`
     

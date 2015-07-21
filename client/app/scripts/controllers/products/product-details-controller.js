@@ -3,9 +3,9 @@
 
 	/**
 	 * @ngdoc function
-	 * @name gemStoreApp.controller:ProductsCtrl
+	 * @name gemStoreApp.controller:ProductDetailCtrl
 	 * @description
-	 * # ProductsCtrl
+	 * # ProductDetailCtrl
 	 * Controller of the gemStoreApp
 	 */
 	angular.module('gemStoreApp')

@@ -10,7 +10,7 @@
     */
 
     angular.module('gemStoreApp')
-    	.controller('CreateUserModalInstanceCtrl', ['$scope', '$modalInstance', 'user', '$http', function ($scope, $modalInstance, user, $http) {
+    	.controller('CreateUserModalInstanceCtrl', ['$scope', '$modalInstance', 'user', 'usersService', function ($scope, $modalInstance, user, usersService) {
             $scope.user = user;
 
             $scope.ok = function () {
@@ -33,20 +33,23 @@
                     return false;
                 }
 
-                // Make the request to the server ... which doesn't exist just yet
-                var request = $http.post('/users', user);
-
-                request.success(function (data) {
-                    console.log(data);
-                    $scope.user = '';
+                usersService.save('/users', user, function() {
+                    console.log("Save successfull!!!");
                     $modalInstance.close();
                 });
 
-                request.error(function (data) {
-                    console.log(data);
-                });
+                // Make the request to the server ... which doesn't exist just yet
+                // var request = $http.post('/users', user);
 
-               
+                // request.success(function (data) {
+                //     console.log(data);
+                //     $scope.user = '';
+                //     $modalInstance.close();
+                // });
+
+                // request.error(function (data) {
+                //     console.log(data);
+                // });               
             };
         }]);
 })();

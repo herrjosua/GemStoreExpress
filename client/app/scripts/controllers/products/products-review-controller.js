@@ -15,24 +15,29 @@
 			// Method for adding a review
 			this.addReview = function(product){
 
-				console.log('Product: ' + angular.toJson(product));
+				var url = '/'+ product._id + '/reviews';
 
-				console.log('/'+ product._id + '/review');
+				console.log("What is url? " + url);
 
 				console.log('posting a review to the front end!!');
 				this.review.createdOn = Date.now();
 
-				console.log('Product review: ' + angular.toJson(this.review));
+				console.log("What is product: " + angular.toJson(product));
 
 				product.reviews.push(this.review);
 
-				console.log('Product plus review: ' + angular.toJson(product));
+				console.log("What is product: " + angular.toJson(product));
 
-				productsService.save(product, function() {
-					console.log("Update the server?");
-					//product.$update();
-					productsService.$update(product);
-				});
+				productsService.update('products/reviews', product, function() {
+                    console.log("Save successfull!!!");
+                    $modalInstance.close();
+                });
+
+				// productsService.save(product, function() {
+				// 	console.log("Update the server?");
+				// 	//product.$update();
+				// 	productsService.$update(product);
+				// });
 
 				this.review = {};
 			};

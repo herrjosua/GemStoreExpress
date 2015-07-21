@@ -9,6 +9,10 @@ var moment = require('moment');
 var _ = require('underscore');
 var color = require('cli-color');
 
+// Access to Database
+var db = require('../../database');
+var Products = db.products;
+
 var mongoose = require('mongoose');
 var Product = mongoose.model('Product');
 var Review = mongoose.model('Review');
@@ -42,52 +46,53 @@ router.post('/', function (req, res, next) {
 
 	console.log("POSTING a single product!");
 
-	// var body = req.body;
+	var body = req.body;
 
-	// Product.findOne({
-	// 	'name': body.name
-	// }, function (err, product) {
+	// Current time this occurred
+	var time = moment().format('MMMM Do YYYY, h:mm:ss a');
 
-	// 	if (err) {
-	// 		// Nice log message on your end, so that you can see what happened
-	// 		console.log('Couldn\'t create new product at ' + color.red(time) + ' by ' + color.red(body.email) + ' because of: ' + err);
+	//ISSUE: The function below is running after the new entry has been already saved to the database
+	
+	Products.findOne({
+		'name': body.name
+	}, function (err, product) {
 
-	// 		// send the error
-	// 		res.status(500).json({
-	// 			'message': 'Internal server error from creating a new product. Please contact support@yourproject.com.'
-	// 		});
-	// 	}
+		// If there is an error
+		if (err) {
+			// Nice log message on your end, so that you can see what happened
+			console.log('Couldn\'t create new product at ' + color.red(time) + ' by ' + color.red(body.email) + ' because of: ' + err);
 
-	// 	if(!product) {
-	// 		var product = new Product (req.body);
-
-	// 		product.save( function (err, post) {
-	// 			if(err) {
-	// 				return next(err);
-	// 			}
-
-	// 			res.json(product);
-	// 		});
-	// 	}
-
-	// 	if (product) {
-	// 		console.log('Product ' + color.red(body.email) + ' already exists.');
-
-
-	// 		res.status(409).json({
-	// 			'message': body.name + ' already exists!'
-	// 		});
-	// 	}
-	// });
-
-	var product = new Product (req.body);
-
-	product.save( function (err, post) {
-		if(err) {
-			return next(err);
+			// send the error
+			res.status(500).json({
+				'message': 'Internal server error from creating a new product. Please contact support@yourproject.com.'
+			});
 		}
 
-		res.json(product);
+		// If the Product does not exist
+		if (!product) {
+			var newProduct = new Product (req.body);
+
+			newProduct.save( function (err, savedPost) {
+				if(err) {
+					return next(err);
+				}
+
+				res.json(savedPost);
+
+				res.status(201).json({
+					'message': body.name + ' created!'
+				});
+			});
+		}
+
+		// If the Product already exists
+		if (product) {
+			console.log('Product ' + color.red(body.email) + ' already exists.');
+
+			res.status(409).json({
+				'message': body.name + 'already exists!'
+			});
+		}
 	});
 });
 
@@ -100,9 +105,7 @@ router.param('product', function (req, res, next, id) {
 	console.log("QUERING the product with an id of: " + id);
 
 	query.exec( function (err, product) {
-		if (err) {
-			return next(err);
-		}
+		if (err) {return next(err);}
 
 		if(!product) {
 			return next(new Error('can\'t find product'));
@@ -124,9 +127,7 @@ router.param('review', function (req, res, next, id) {
 
 
 	query.exec( function (err, review) {
-		if (err) {
-			return next(err);
-		}
+		if (err) {return next(err);}
 
 		if(!review) {
 			return next(new Error('can\'t find review'));
@@ -146,9 +147,7 @@ router.get('/:product', function (req, res, next) {
 	console.log("GETTING a single product");
 
 	req.product.populate('reviews', function (err, product) {
-		if (err) {
-			return next(err);
-		}
+		if (err) {return next(err);}
 
 		res.json(req.product);
 	});
@@ -157,7 +156,7 @@ router.get('/:product', function (req, res, next) {
 // POST route for creating a new review
 // /products is coming from index.js
 // /products/:product/reviews 
-router.post('/:product/comment', function (req, res, next) {
+router.post('/:product/review', function (req, res, next) {
 
 	console.log("POSTING a review for a product");
 
@@ -165,9 +164,7 @@ router.post('/:product/comment', function (req, res, next) {
 	review.product = req.product;
 
 	review.save( function (err, review){
-		if (err) {
-			return next(err);
-		}
+		if (err) {return next(err);}
 
 		req.product.reviews.push(review);
 		req.product.save( function (err, product) {

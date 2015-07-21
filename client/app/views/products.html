@@ -1,5 +1,45 @@
-<div class="row">
-	<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 product-filters clearfix">
+<div ng-controller="ProductsPaginationCtrl" class="row">
+
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-filters filter clearfix">
+		<pagination-Count></pagination-Count>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 clearfix">
+			<span class="pull-left col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<search></search>
+			</span>
+		</div>
+		<span class="pull-right" ng-controller="CreateProductModalCtrl">
+			<button class="btn btn-primary" ng-click="open()">Add Product <i class="fa fa-sign-in"></i></button>
+		</span>
+	</div>
+
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="list-group">
+			<a ui-sref="productDetails({id:product._id})" class="list-group-item clearfix" ng-repeat="product in filteredProducts = (products | filter: search | startFrom: (currentPage - 1) * itemsPerPage | limitTo: itemsPerPage | orderBy:orderProp)">
+				{{product.name}} -- {{product._id}}
+			</a>
+		</div>
+	</div>
+
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<ul class="list-unstyled">
+			<li><strong>Items Per Page:</strong> {{itemsPerPage}}</li>
+			<li><strong>Total Items:</strong> {{totalItems}}</li>
+			<li><strong>Max Size:</strong> {{maxSize}}</li>
+			<li><strong>Products Size:</strong> {{products.length}}</li>
+			<li><strong>FilteredProducts Size:</strong> {{filteredProducts.length}}</li>
+			<li><strong>Number of pages:</strong> {{numPages}}</li>
+			<li><strong>Current Page:</strong> {{currentPage}}</li>
+		</ul>
+	</div>
+
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 filters">
+		<pagination-Count></pagination-Count>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pagination">
+			<pagination class="pull-right" page="currentPage" total-items="totalItems" ng-model="currentPage" max-size="maxSize" ng-change="pageChanged()" items-per-page="itemsPerPage" num-pages="numPages"></pagination>
+		</div>
+	</div>
+
+	<!-- <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 product-filters clearfix">
 		<span class="pull-right" ng-controller="CreateProductModalCtrl">
 			<button class="btn btn-primary" ng-click="open()">Add Product <i class="fa fa-sign-in"></i></button>
 		</span>
@@ -14,5 +54,5 @@
 				{{product.description}}
 			</a>
 		</div>
-	</div>
+	</div> -->
 </div>
