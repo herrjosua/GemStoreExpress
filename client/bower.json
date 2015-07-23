@@ -7,19 +7,20 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "angular": "1.3.16",
+    "angular": "1.4.3",
     "angular-bootstrap": "~0.13.0",
     "angular-ui-router": "0.2.15",
     "mongojs": "~1.0.1",
     "font-awesome": "~4.3.0",
     "bootstrap-less": "~3.3.4",
-    "angular-resource": "1.3.16",
+    "angular-resource": "1.4.3",
     "karma": "~0.4.6",
     "protractor": "~2.1.0",
-    "angular-breadcrumb": "~0.4.0"
+    "angular-breadcrumb": "~0.4.0",
+    "restangular":"latest"
   },
   "devDependencies": {
-    "angular-mocks": "1.3.16"
+    "angular-mocks": "1.4.3"
   },
   "appPath": "app",
   "moduleName": "gemStoreApp"

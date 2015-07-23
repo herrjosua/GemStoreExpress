@@ -8,7 +8,7 @@
     *
     * Main module of the application.
 */
-angular.module('gemStoreApp', ['ngResource', 'ui.router', 'ui.bootstrap', 'ncy-angular-breadcrumb', 'gemStoreApp.usersService', 'gemStoreApp.productService'])
+angular.module('gemStoreApp', ['ngResource', 'ui.router', 'ui.bootstrap', 'restangular', 'ncy-angular-breadcrumb', 'gemStoreApp.usersService', 'gemStoreApp.productService'])
     //for ui-router
     .config(function ($stateProvider, $urlRouterProvider) {
 

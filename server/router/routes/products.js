@@ -19,7 +19,7 @@ var Review = mongoose.model('Review');
 
 // Route middleware
 router.use(function(req, res, next) {
-	console.log("Something is happening in products!!");
+	console.log('Something is happening in products!!');
 	next();
 });
 
@@ -28,7 +28,7 @@ router.use(function(req, res, next) {
 // /products/
 router.get('/', function (req, res, next) {
 
-	console.log("GETTING all products!");
+	console.log('GETTING all products!');
 
 	Product.find( function (err, products) {
 		if (err) {
@@ -44,7 +44,7 @@ router.get('/', function (req, res, next) {
 // /products/
 router.post('/', function (req, res, next) {
 
-	console.log("POSTING a single product!");
+	console.log('POSTING a single product!');
 
 	var body = req.body;
 
@@ -87,11 +87,9 @@ router.post('/', function (req, res, next) {
 
 		// If the Product already exists
 		if (product) {
-			console.log('Product ' + color.red(body.email) + ' already exists.');
+			console.log('Product' + color.red(product.name) + ' already exists.');
 
-			res.status(409).json({
-				'message': body.name + 'already exists!'
-			});
+			res.status(409).json({});
 		}
 	});
 });
@@ -100,9 +98,7 @@ router.post('/', function (req, res, next) {
 router.param('product', function (req, res, next, id) {
 	var query = Product.findById(id);
 
-	console.log("Am I hitting my product param?");
-
-	console.log("QUERING the product with an id of: " + id);
+	console.log('QUERING the product with an id of: ' + id);
 
 	query.exec( function (err, product) {
 		if (err) {return next(err);}
@@ -121,9 +117,9 @@ router.param('product', function (req, res, next, id) {
 router.param('review', function (req, res, next, id) {
 	var query = Review.findById(id);
 
-	console.log("Am I hitting my review param?");
+	console.log('Am I hitting my review param?');
 
-	console.log("QUERING the product with an id of: " + id);
+	console.log('QUERING the product with an id of: ' + id);
 
 
 	query.exec( function (err, review) {
@@ -144,7 +140,7 @@ router.param('review', function (req, res, next, id) {
 // /products/:product
 router.get('/:product', function (req, res, next) {
 
-	console.log("GETTING a single product");
+	console.log('GETTING a single product');
 
 	req.product.populate('reviews', function (err, product) {
 		if (err) {return next(err);}
@@ -156,16 +152,40 @@ router.get('/:product', function (req, res, next) {
 // POST route for creating a new review
 // /products is coming from index.js
 // /products/:product/reviews 
-router.post('/:product/review', function (req, res, next) {
 
-	console.log("POSTING a review for a product");
+//url, this.review
+//'products/'+ product._id + '/reviews', review
 
-	var review = new Review(req.body);
+router.post('/:product/reviews', function (req, res, next) {
+
+	// Current time this occurred
+	var time = moment().format('MMMM Do YYYY, h:mm:ss a');
+
+	//var body = req.review;
+
+	console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+	console.log('POSTING a review for a ' + color.yellow(req.product.name));
+
+	console.log('req.body: ' + color.blue(req.review));
+	console.log('req: ' + color.red(req));
+	console.log('res: ' + color.green(res));
+	//console.log('next: ' + color.blue(next));
+
+	var review = new Review(req.review);
 	review.product = req.product;
 
-	review.save( function (err, review){
+	debugger;
+
+	console.log('req.review: ' + color.yellow(req.review));
+	console.log('review: ' + color.red(review));
+	console.log('review.review: ' + color.red(review.review));
+	console.log('Review.stars: ' + color.red(review.stars));
+	console.log('Product: ' + color.blue(req.product));
+
+	review.save(function (err, review){
 		if (err) {return next(err);}
 
+		//product.reviews.push(this.review);
 		req.product.reviews.push(review);
 		req.product.save( function (err, product) {
 			if (err) {
@@ -173,6 +193,9 @@ router.post('/:product/review', function (req, res, next) {
 			}
 
 			res.json(review);
+			res.status(201).json({
+				'message': review.review + ' created!'
+			});
 		});
 	});
 });

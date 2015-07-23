@@ -101,4 +101,16 @@
 * **Modified** `/source/products.json` by removing the image and reviews arrays
 * **Added**  `/client/app/scripts/controllers/products/products-pagination-controller.js`, `/client/app/scripts/directives/product-pagination/product-pagination-directive.js`, `/client/app/scripts/directives/product-pagination/pagination-count.html`,`/client/app/scripts/directives/search/search-directive.js`,`/client/app/scripts/directives/search/search.html`
 * **Modified** Removed comments from `/server/router/routes/products.js` and `/server/router/routes/users.js`
+
+### 07/20/2015 to 07/23/2015 @ 1420
+* **Modified** `README.MD` by adding `Current Issues/Road Blocks`
+* **Updated** the version of `angularjs` from `1.3.16` to `1.4.3`
+* **Updated** the version of `angular-resource` from `1.3.16` to `1.4.3`
+* **Updated** the version of `angular-route` from `1.3.16` to `1.4.3` **NOTE** need to remove this as I am using `angular-ui-router`
+* **Updated** the version of `angular-mocks` from `1.3.16` to `1.4.3`
+* **Added** restangular to `/client/bower.json`
+* **Modified/Added** restangular depejdecy injection to `/client/app/scripts/app.js`
+* **Modified** `client/app/index.html` by adding linkes to restangular and lodash
+* **Modified** `/client/app/scripts/controllers/products/products-review-controller.js` to use restangular instead of ngResource
+* **Modified/Cleaned** up comments in `client/app/scripts/controllers/products/modal-product-instance-controller.js`, `client/app/scripts/controllers/products/products-pagination-controller.js`, `client/app/scripts/controllers/products/products-review-controller.js`,`client/app/views/products.html`,`server/router/routes/products.js`
     

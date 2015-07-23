@@ -13,9 +13,13 @@
 	</div>
 
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<div class="list-group">
+		<div class="list-group product-list">
 			<a ui-sref="productDetails({id:product._id})" class="list-group-item clearfix" ng-repeat="product in filteredProducts = (products | filter: search | startFrom: (currentPage - 1) * itemsPerPage | limitTo: itemsPerPage | orderBy:orderProp)">
-				{{product.name}} -- {{product._id}}
+				<div class="page-header clearfix">
+					<h2 class="pull-left"><i class="fa fa-diamond"></i> {{product.name}}</h2>
+					<span class="pull-right product-price">{{product.price | currency}}</span>
+				</div>
+				{{product.description}}
 			</a>
 		</div>
 	</div>
@@ -38,21 +42,4 @@
 			<pagination class="pull-right" page="currentPage" total-items="totalItems" ng-model="currentPage" max-size="maxSize" ng-change="pageChanged()" items-per-page="itemsPerPage" num-pages="numPages"></pagination>
 		</div>
 	</div>
-
-	<!-- <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 product-filters clearfix">
-		<span class="pull-right" ng-controller="CreateProductModalCtrl">
-			<button class="btn btn-primary" ng-click="open()">Add Product <i class="fa fa-sign-in"></i></button>
-		</span>
-	</div>
-	<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-		<div class="list-group product-list">
-			<a ui-sref="productDetails({id:product._id})" class="list-group-item" ng-repeat="product in products">
-				<div class="page-header clearfix">
-					<h2 class="pull-left"><i class="fa fa-diamond"></i> {{product.name}}</h2>
-					<span class="pull-right product-price">{{product.price | currency}}</span>
-				</div>
-				{{product.description}}
-			</a>
-		</div>
-	</div> -->
 </div>

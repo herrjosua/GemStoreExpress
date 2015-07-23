@@ -24,8 +24,6 @@
 
             $scope.submit = function () {
 
-                console.log("What is the product? " + angular.toJson(($scope.product)));
-
                 if (!product.name || !product.description || !product.shine || !product.price || !product.rarity || !product.color || !product.faces) {
                     console.log('Please fill out all form fields.');
                     return false;

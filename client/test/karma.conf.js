@@ -24,6 +24,8 @@ module.exports = function(config) {
       'src/vendor/angular-ui-router/release/angular-ui-router.js',
       'src/vendor/angular-resource/angular-resource.js',
       'src/vendor/angular-breadcrumb/release/angular-breadcrumb.js',
+      'src/vendor/lodash/lodash.js',
+      'src/vendor/restangular/dist/restangular.js',
       'src/vendor/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
