@@ -29,8 +29,12 @@
                     return false;
                 }
 
-                productsService.save('/products', product, function() {
-                    console.log("Save successfull!!!");
+                productsService.save('/products', product, function(value, responseHeaders) {
+                    console.log('Save successfull!!!');
+                    console.log('what is value:' + angular.toJson(value) + '?');
+                    product._id = value._id;
+                    //console.log('what is responseHeaders:' + angular.toJson(responseHeaders) + '?');
+                    //console.log(angular.toJson((product)));
                     $modalInstance.close();
                 });
             };

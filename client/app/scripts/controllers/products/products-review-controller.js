@@ -37,13 +37,13 @@
 				console.log('New review: ' + angular.toJson(this.review));
 
 				//Pushing the review to the front-end
-				//product.reviews.push(this.review);
+				product.reviews.push(this.review);
 
 				//console.log('What is product after adding a review to Front-end: ' + angular.toJson(product));
 
 				//productsService.save('/products', product, function() {
 				//productReview.post(product).then(function(newResource){
-				//updatedProduct.post(productReview, product).then(function(newResource){)
+				//productsService.post(productReview).then(function(newResource){)
 				productReview.post(product).then(function(newResource){
 					//productsService.update(productReview, product);
 					console.log('product: ' + angular.toJson(product));

@@ -113,4 +113,19 @@
 * **Modified** `client/app/index.html` by adding linkes to restangular and lodash
 * **Modified** `/client/app/scripts/controllers/products/products-review-controller.js` to use restangular instead of ngResource
 * **Modified/Cleaned** up comments in `client/app/scripts/controllers/products/modal-product-instance-controller.js`, `client/app/scripts/controllers/products/products-pagination-controller.js`, `client/app/scripts/controllers/products/products-review-controller.js`,`client/app/views/products.html`,`server/router/routes/products.js`
+
+### 07/23/2015 post 1420
+* **Modified** `/client/app/scripts/controllers/products/modal-product-instance-controller.js` to return the `_id` of the newly created product from mongodb
+* **Added** `/client/app/scripts/controllers/search/search-controller.js`
+* **Modified** `/client/app/scripts/directives/search-directive.js` by adding a link to the newly created `search-controller.js`
+* **Added** `/client/app/scripts/controllers/search/search.html` template
+
+### 07/24/2015
+* **Modified** `/client/package.json` by correcting the version of `mongojs` from `2.12.1` to `latest`
+* **Modified/Added** the latest version of `grunt-modernizr` to `/client/package.json`
+* **Modified/Added** `modernizr` config to `/client/Gruntfile.js`
+* **Modified/Added** `modernizr` config and copy tasks to `/client/Gruntfile.js`
+* **Modified** `/client/app/scripts/controllers/search/search.html` markup
+* **Modified** `/client/less/main.less` styles for the search on the products page
+* **Modified** `/client/app/scripts/controllers/search/search-controller.js` by adding a `clearSearch` method
     

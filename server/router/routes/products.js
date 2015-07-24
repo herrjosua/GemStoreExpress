@@ -79,6 +79,8 @@ router.post('/', function (req, res, next) {
 
 				res.json(savedPost);
 
+				console.log(body.name + ' has been created!')
+
 				res.status(201).json({
 					'message': body.name + ' created!'
 				});
@@ -161,7 +163,23 @@ router.post('/:product/reviews', function (req, res, next) {
 	// Current time this occurred
 	var time = moment().format('MMMM Do YYYY, h:mm:ss a');
 
-	//var body = req.review;
+	// var review = new Review(req.review);
+
+	// review.save( function (err, savedReview) {
+	// 	if(err) {
+	// 		return next(err);
+	// 	}
+
+	// 	res.json(savedReview);
+
+	// 	console.log(review.name + ' has been created!')
+
+	// 	res.status(201).json({
+	// 		'message': review.name + ' created!'
+	// 	});
+	// });
+
+	var body = req.review;
 
 	console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
 	console.log('POSTING a review for a ' + color.yellow(req.product.name));

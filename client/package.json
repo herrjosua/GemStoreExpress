@@ -23,6 +23,7 @@
     "grunt-contrib-less": "^1.0.1",
     "grunt-contrib-uglify": "^0.7.0",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-modernizr": "latest",
     "grunt-filerev": "^2.1.2",
     "grunt-google-cdn": "^0.4.3",
     "grunt-karma": "^0.11.1",
@@ -40,7 +41,7 @@
     "karma-phantomjs-launcher": "^0.2.0",
     "karma-ng-html2js-preprocessor": "^0.1.0",
     "load-grunt-tasks": "^3.1.0",
-    "mongojs": "2.12.1",
+    "mongojs": "latest",
     "phantomjs": "^1.9.17",
     "time-grunt": "^1.0.0"
   },

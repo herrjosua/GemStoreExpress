@@ -12,7 +12,10 @@
 		.controller('ProductsCtrl', ['$scope', 'productsService', function ($scope, productsService) {
 
 			$scope.products = {};
+			//ngResource Method of getting products
 			console.log('Query the database for products!');
 			$scope.products = productsService.query();
+
+
 		}]);
 })();

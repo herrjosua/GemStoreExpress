@@ -148,6 +148,49 @@ module.exports = function (grunt) {
             }
         },
 
+        // Modernizr
+        modernizr: {
+            dist: {
+                'devFile': 'node_modules/grunt-modernizr/lib/modernizr-dev.js',
+
+                'outputFile': '.tmp/scripts/modernizr-custom.js',
+
+                // Based on the default selection of 'Extra' from the Modernizr Development download
+                'extra': {
+                    'shiv': true,
+                    'printshiv': false,
+                    'load': true,
+                    'mq': true,
+                    'cssclasses': true,
+                },
+
+                // Based on the default selection of `Extensibility` from the Modernizr Development download
+                'extensibility': {
+                    'addtest': false,
+                    'prefixed': false,
+                    'teststyles': false,
+                    'testprops': false,
+                    'testallprops': false,
+                    'hasevents': false,
+                    'prefixes': false,
+                    'domprefixes': false,
+                    'cssclassprefix': ''
+                },
+
+                'uglify': false,
+
+                'tests': [
+                    'csspointerevents'
+                ],
+
+                'parseFiles': true,
+
+                'matchCommunityTests': true,
+
+                'customTests': []
+            }
+        },
+
         // Make sure code styles are up to par and there are no obvious mistakes
         jshint: {
             options: {
@@ -241,9 +284,7 @@ module.exports = function (grunt) {
         },
 
         //grunt-postcss
-
         postcss: {
-
             defaults: {
                 options: {
                     // processors: [
@@ -475,6 +516,17 @@ module.exports = function (grunt) {
                     cwd: '.',
                     expand: true
                 }]
+            },
+            modernizr: {
+                files: [{
+                    src: [
+                        '.tmp/scripts/*.js'
+                    ],
+                    dest: '<%= yeoman.app %>/scripts',
+                    flatten: true,
+                    cwd: '.',
+                    expand: true
+                }]
             }
         },
 
@@ -483,19 +535,22 @@ module.exports = function (grunt) {
             server: [
                 'copy:styles',
                 'copy:less',
-                'copy:fonts'
+                'copy:fonts',
+                'copy:modernizr',
             ],
         
             test: [
                 'copy:styles',
                 'copy:less',
-                'copy:fonts'
+                'copy:fonts',
+                'copy:modernizr'
             ],
         
             dist: [
                 'copy:styles',
                 'copy:less',
                 'copy:fonts',
+                'copy:modernizr',
                 //'imagemin',
                 'svgmin'
             ]
@@ -519,6 +574,7 @@ module.exports = function (grunt) {
         grunt.task.run([
             'clean:server',
             'wiredep',
+            'modernizr',
             'concurrent:server',
             //'autoprefixer',
             'postcss',
@@ -546,6 +602,7 @@ module.exports = function (grunt) {
         'clean:dist',
         'wiredep',
         'useminPrepare',
+        'modernizr',
         'concurrent:dist',
         //'autoprefixer',
         'postcss',

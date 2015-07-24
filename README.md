@@ -15,9 +15,13 @@
 
 ## Current Issues/Road Blocks
 
-* After adding a new product the `href` value is not being updated until after a page refresh
+* ~~After adding a new product the `href` value is not being updated until after a page refresh~~
 
 * Unable to add a review to a product. Current is adding a blank review. Is not adding the review details
+
+## Todo
+
+* Add `grunt-modernizr` to project & and add modernizier task
 
 ## Tutorial
 
