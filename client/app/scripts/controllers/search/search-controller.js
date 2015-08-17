@@ -3,16 +3,15 @@
 
 	/**
 	 * @ngdoc function
-	 * @name gemStoreApp.controller:SearchCtrl
+	 * @name gemStoreApp.controller:searchCtrl
 	 * @description
-	 * # SearchCtrl
+	 * # searchCtrl
 	 * Controller of the gemStoreApp
 	 */
 	angular.module('gemStoreApp')
-		.controller('SearchCtrl', ['$scope', function ($scope) {
-
+		.controller('searchCtrl', ['$scope', function ($scope) {
 			$scope.clearSearch = function(){
 				$scope.search.name = '';
 			};
-	}]);
+		}]);
 })();

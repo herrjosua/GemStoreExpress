@@ -64,8 +64,8 @@
 * **Modified/Added** A `update` method to my `productsService` in `/client/app/scripts/services/products/product-service.js` & added `id: '@id'`
 * **Modified** The name of `gemStoreApp.usersService` to `gemStoreApp.userService` in `/client/app/scripts/services/users/users-service.js`
 * **Added** New html markup with `ng-click` attribute for `addProduct()` for an `Add Product` button to `client/app/views/products.html`
-* **Added** New method in the `ProductsCtrl` in `/client/app/scripts/controllers/products/product-controller.js` for `addProduct` to add hardcoded product to the front-end and back-end. 
-* **Modified/Added** The `ProductsCtrl` in `/client/app/scripts/controllers/products/product-controller.js` by removing up the Dependecy Injection by removing the `$http` and the `$state` calls, and by removing the `ProductDetailCtrl` to a new file in `/client/app/scripts/controllers/products/`
+* **Added** New method in the `productsCtrl` in `/client/app/scripts/controllers/products/product-controller.js` for `addProduct` to add hardcoded product to the front-end and back-end. 
+* **Modified/Added** The `productsCtrl` in `/client/app/scripts/controllers/products/product-controller.js` by removing up the Dependecy Injection by removing the `$http` and the `$state` calls, and by removing the `ProductDetailCtrl` to a new file in `/client/app/scripts/controllers/products/`
 * **Modified** The remove method in the `UsersCtrl` in `/client/app/scripts/controllers/users/users-controller.js` to use the `usersService` instead of the `$http` call, and by removing the Dependecy Injection by removing the `$http` call
 * **Modified** The schema for `products` by adding a `createdOn` attribute in `/server/database/schemas/products.js`
 * **Modified** Comments for the products routes in `/server/router/routes/products.js`
@@ -85,7 +85,7 @@
 * **Modified** `/client/app/scripts/controllers/products/modal-product-controller.js` to inset the new product to the front-end after the add product modal is closed
 * **Modified** `/client/app/scripts/controllers/products/modal-product-instance-controller.js` by removing unnecessary/commented code
 * **Modified** Removed the HTML markup used to add the hardcoded product in `/client/app/views/products.html`
-* **Modified** Removed the addProduct method from the `ProductsCtrl` in `/client/app/scripts/controllers/products/products-controller.js`
+* **Modified** Removed the addProduct method from the `productsCtrl` in `/client/app/scripts/controllers/products/products-controller.js`
 * **Modified** `/server/router/routes/products.js` by adding a method to check if a product already exists by comparing the product name to the product names in the database. This code is commented out, still working on resolving an issue where if an error occurs, I am unable to submit the form with corrected data.
 
 ### 07/19/2015
@@ -128,4 +128,30 @@
 * **Modified** `/client/app/scripts/controllers/search/search.html` markup
 * **Modified** `/client/less/main.less` styles for the search on the products page
 * **Modified** `/client/app/scripts/controllers/search/search-controller.js` by adding a `clearSearch` method
+
+### 07/30/2015
+* **Modified** The views for `Products`, `Products Detail`, and `add new Product` to use `Restangular` instead of `ngResource`
+* **Added** a new `filters` directory within the `/client/app/scripts/` directory
+* **Added** a new `search` directory within the `/client/app/scripts/filters/` directory
+* **Added** `search-filters.js` to `/client/app/scripts/filters/search/` directory
+* **Modified** `/client/app/index.html` by adding the new `search-filters.js` file
+* **Modified** `/client/app/views/products.html` by adding my custom filter
+
+### 07/31/2015 to 08/17/2015
+* **Modified** `/client/Gruntfile.js` by adding `modernizr.js`, creating a task to generating a custom version name `modernizr-custom.js` in the `/client/app/scripts/` directory , and disabling jshint on the newly created file.
+* **Modified** the module name of `ProductsCtrl` to `productsCtrl`
+* **Modified** the module name of `SearchCtrl` to `searchCtrl`
+* **Modified** removed the `ng-controller` code from the search template in `client/app/scripts/directives/search/search.html`
+* **Added** `/client/app/scripts/filters/search/search-filter` **NOTE** might be able to remove this
+* **Modified** `/client/app/scripts/app.js` by adding a `Restagular` Config
+* **Modified** both `usersService` and `productsService` to use `Restangular`
+* **Modified** `/client/app/scripts/controllers/users/modal-signup-instance-controller.js` to use `Restangular` to add a new user
+* **Modified** `/client/app/scripts/controllers/users/users-controller.js` to use `Restangular` to list and remove users
+* **Modified** `/source/products.json` to include a `createdOn` field
+* **Modified** cleaned up comments in both `/server/router/routes/products.js` and `/server/router/routes/users.js`
+* **Modified** the delete action to pass the id of the user to be removed in `/client/app/views/users.html`
+* **Modified** the `ng-repeat`, `pagination markup` in `/client/app/views/products.html`
+* **Modified** cleaned up the `paginationCount` directive in `/client/app/scripts/directives/products/product-pagination-directive.js`
+* **Modified** the markup for the `paginationCount` template in `/client/app/scripts/directives/products/product-count.html`
+
     

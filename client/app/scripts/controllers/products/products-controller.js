@@ -1,21 +1,19 @@
 (function() {
-    'use strict';
+	'use strict';
 
 	/**
 	 * @ngdoc function
-	 * @name gemStoreApp.controller:ProductsCtrl
+	 * @name gemStoreApp.controller:productsCtrl
 	 * @description
-	 * # ProductsCtrl
+	 * # productsCtrl
 	 * Controller of the gemStoreApp
 	 */
 	angular.module('gemStoreApp')
-		.controller('ProductsCtrl', ['$scope', 'productsService', function ($scope, productsService) {
-
+		.controller('productsCtrl', ['$scope', 'productsService', function ($scope, productsService) {
 			$scope.products = {};
-			//ngResource Method of getting products
-			console.log('Query the database for products!');
-			$scope.products = productsService.query();
+			$scope.products = productsService.getList().$object;
 
-
+			$scope.dateString = 'createdOn';
+			$scope.orderProp = new Date($scope.dateString);
 		}]);
 })();

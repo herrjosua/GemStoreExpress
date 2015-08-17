@@ -8,7 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "angular": "1.4.3",
-    "angular-bootstrap": "~0.13.0",
+    "angular-bootstrap": "0.13.3",
     "angular-ui-router": "0.2.15",
     "mongojs": "~1.0.1",
     "font-awesome": "~4.3.0",

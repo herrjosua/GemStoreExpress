@@ -1,5 +1,4 @@
 <div ng-controller="ProductsPaginationCtrl" class="row">
-
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-filters filter clearfix">
 		<pagination-Count></pagination-Count>
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 clearfix">
@@ -14,26 +13,17 @@
 
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 		<div class="list-group product-list">
-			<a ui-sref="productDetails({id:product._id})" class="list-group-item clearfix" ng-repeat="product in filteredProducts = (products | filter: search | startFrom: (currentPage - 1) * itemsPerPage | limitTo: itemsPerPage | orderBy:orderProp)">
+			<a ui-sref="productDetails({id:product._id})" class="list-group-item clearfix" ng-repeat="product in products | orderBy: '-createdOn' | filter: search.name | startFrom: (currentPage-1)*itemsPerPage | limitTo: itemsPerPage">
+
 				<div class="page-header clearfix">
 					<h2 class="pull-left"><i class="fa fa-diamond"></i> {{product.name}}</h2>
 					<span class="pull-right product-price">{{product.price | currency}}</span>
 				</div>
 				{{product.description}}
+				<pre>{{product.createdOn | date: 'MM/dd/yyyy @ hh:mm'}}</pre>
+
 			</a>
 		</div>
-	</div>
-
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-		<ul class="list-unstyled">
-			<li><strong>Items Per Page:</strong> {{itemsPerPage}}</li>
-			<li><strong>Total Items:</strong> {{totalItems}}</li>
-			<li><strong>Max Size:</strong> {{maxSize}}</li>
-			<li><strong>Products Size:</strong> {{products.length}}</li>
-			<li><strong>FilteredProducts Size:</strong> {{filteredProducts.length}}</li>
-			<li><strong>Number of pages:</strong> {{numPages}}</li>
-			<li><strong>Current Page:</strong> {{currentPage}}</li>
-		</ul>
 	</div>
 
 	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 filters">

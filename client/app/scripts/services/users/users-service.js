@@ -8,9 +8,8 @@
 	 * # userService
 	 */
 
-	angular.module('gemStoreApp.usersService',['ngResource'])
-
-	    .factory('usersService', ['$resource', function($resource){
-	        return $resource('/users/:id', {},{});
-	    }]);
+	angular.module('gemStoreApp.usersService',[])
+	    .factory('usersService', function(Restangular) {
+            return Restangular.service('users');
+        });
 })();

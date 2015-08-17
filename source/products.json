@@ -8,7 +8,8 @@
 		"color": "#CCC",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T17:15:29.707Z")
 	},
 	{
 		"name": "Hibonite",
@@ -19,7 +20,8 @@
 		"color": "#CCC",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T17:10:29.707Z")
 	},
 	{
 		"name": "Bixbite",
@@ -30,7 +32,8 @@
 		"color": "#FFF",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T16:15:29.707Z")
 	},
 	{
 		"name": "Jeremejevite",
@@ -41,7 +44,8 @@
 		"color": "#EEE",
 		"faces": 12,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T15:15:29.707Z")
 	},
 	{
 		"name": "Chambersite",
@@ -52,7 +56,8 @@
 		"color": "#000",
 		"faces": 6,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T14:15:29.707Z")
 	},
 	{
 		"name": "Taaffeite",
@@ -63,7 +68,8 @@
 		"color": "#CCC",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T13:15:29.707Z")
 	},
 	{
 		"name": "Musgravite",
@@ -74,7 +80,8 @@
 		"color": "#FFF",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T12:15:29.707Z")
 	},
 	{
 		"name": "Grandidierite",
@@ -85,7 +92,8 @@
 		"color": "#EEE",
 		"faces": 12,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T11:15:29.707Z")
 	},
 	{
 		"name": "Poudretteite",
@@ -96,7 +104,8 @@
 		"color": "#000",
 		"faces": 6,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T10:15:29.707Z")
 	},
 	{
 		"name": "Serendibite",
@@ -107,7 +116,8 @@
 		"color": "#CCC",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T09:15:29.707Z")
 	},
 	{
 		"name": "Zektzerite",
@@ -118,7 +128,8 @@
 		"color": "#FFF",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T08:15:29.707Z")
 	},
 	{
 		"name": "Alexandrites",
@@ -129,7 +140,8 @@
 		"color": "#FFF",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T07:15:29.707Z")
 	},
 	{
 		"name": "Aquamarines",
@@ -140,7 +152,8 @@
 		"color": "#FFF",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T06:15:29.707Z")
 	},
 	{
 		"name": "Opals",
@@ -151,7 +164,8 @@
 		"color": "#FFF",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T05:15:29.707Z")
 	},
 	{
 		"name": "Sapphires",
@@ -162,7 +176,8 @@
 		"color": "#FFF",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T04:15:29.707Z")
 	},
 	{
 		"name": "Ruby",
@@ -173,7 +188,8 @@
 		"color": "#FFF",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T03:15:29.707Z")
 	},
 	{
 		"name": "Topaz",
@@ -184,7 +200,8 @@
 		"color": "#FFF",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-06T02:15:29.707Z")
 	},
 	{
 		"name": "Diamond",
@@ -195,7 +212,8 @@
 		"color": "#FFF",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-05T18:15:29.707Z")
 	},
 	{
 		"name": "Dumortierite",
@@ -206,8 +224,10 @@
 		"color": "#FFF",
 		"faces": 14,
 		"images": [],
-		"reviews": []
-	},{
+		"reviews": [],
+		"createdOn": ISODate("2015-08-05T14:15:29.707Z")
+	},
+	{
 		"name": "Jade",
 		"description": "Quartz is the second most abundant gem.",
 		"shine": 8,
@@ -216,6 +236,7 @@
 		"color": "#FFF",
 		"faces": 14,
 		"images": [],
-		"reviews": []
+		"reviews": [],
+		"createdOn": ISODate("2015-08-02T12:15:29.707Z")
 	}
 ]

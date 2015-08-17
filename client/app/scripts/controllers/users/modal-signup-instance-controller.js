@@ -10,7 +10,7 @@
     */
 
     angular.module('gemStoreApp')
-    	.controller('CreateUserModalInstanceCtrl', ['$scope', '$modalInstance', 'user', 'usersService', function ($scope, $modalInstance, user, usersService) {
+    	.controller('CreateUserModalInstanceCtrl', ['$scope', '$modalInstance', 'user', 'usersService', 'Restangular', function ($scope, $modalInstance, user, usersService, Restangular) {
             $scope.user = user;
 
             $scope.ok = function () {
@@ -33,23 +33,12 @@
                     return false;
                 }
 
-                usersService.save('/users', user, function() {
+
+                var resource = Restangular.all('/users');
+                resource.post(user).then(function(newResource){
                     console.log("Save successfull!!!");
                     $modalInstance.close();
-                });
-
-                // Make the request to the server ... which doesn't exist just yet
-                // var request = $http.post('/users', user);
-
-                // request.success(function (data) {
-                //     console.log(data);
-                //     $scope.user = '';
-                //     $modalInstance.close();
-                // });
-
-                // request.error(function (data) {
-                //     console.log(data);
-                // });               
+                });            
             };
         }]);
 })();

@@ -154,51 +154,15 @@ router.get('/:product', function (req, res, next) {
 // POST route for creating a new review
 // /products is coming from index.js
 // /products/:product/reviews 
-
-//url, this.review
-//'products/'+ product._id + '/reviews', review
-
 router.post('/:product/reviews', function (req, res, next) {
 
 	// Current time this occurred
 	var time = moment().format('MMMM Do YYYY, h:mm:ss a');
 
-	// var review = new Review(req.review);
-
-	// review.save( function (err, savedReview) {
-	// 	if(err) {
-	// 		return next(err);
-	// 	}
-
-	// 	res.json(savedReview);
-
-	// 	console.log(review.name + ' has been created!')
-
-	// 	res.status(201).json({
-	// 		'message': review.name + ' created!'
-	// 	});
-	// });
-
 	var body = req.review;
 
-	console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-	console.log('POSTING a review for a ' + color.yellow(req.product.name));
-
-	console.log('req.body: ' + color.blue(req.review));
-	console.log('req: ' + color.red(req));
-	console.log('res: ' + color.green(res));
-	//console.log('next: ' + color.blue(next));
-
-	var review = new Review(req.review);
+	var review = new Review(req.body);
 	review.product = req.product;
-
-	debugger;
-
-	console.log('req.review: ' + color.yellow(req.review));
-	console.log('review: ' + color.red(review));
-	console.log('review.review: ' + color.red(review.review));
-	console.log('Review.stars: ' + color.red(review.stars));
-	console.log('Product: ' + color.blue(req.product));
 
 	review.save(function (err, review){
 		if (err) {return next(err);}

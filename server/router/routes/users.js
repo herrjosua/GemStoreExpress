@@ -119,6 +119,8 @@ router.get('/:id', function (req, res) {
 // DELETE route for a single user
 router.delete('/:id', function (req, res) {
 
+	//console.log('req.params.id ' + req.params.id);
+
 	Users.findByIdAndRemove(req.params.id, req.body, function (err, user) {
 		if (err) {
 			return next(err);

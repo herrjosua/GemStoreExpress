@@ -10,12 +10,12 @@
     */
 
     angular.module('gemStoreApp')
-    	.controller('CreateProductModalInstanceCtrl', ['$scope', '$modalInstance', 'product', 'productsService', function ($scope, $modalInstance, product, productsService) {
+    	.controller('CreateProductModalInstanceCtrl', ['$scope', '$modalInstance', 'product', 'productsService', 'Restangular', function ($scope, $modalInstance, product, productsService, Restangular) {
                 
             $scope.product = product;
 
             $scope.ok = function () {
-             $modalInstance.close();
+                $modalInstance.close();
             };
 
             $scope.cancel = function () {
@@ -23,18 +23,15 @@
             };
 
             $scope.submit = function () {
-
                 if (!product.name || !product.description || !product.shine || !product.price || !product.rarity || !product.color || !product.faces) {
                     console.log('Please fill out all form fields.');
                     return false;
                 }
 
-                productsService.save('/products', product, function(value, responseHeaders) {
-                    console.log('Save successfull!!!');
-                    console.log('what is value:' + angular.toJson(value) + '?');
-                    product._id = value._id;
-                    //console.log('what is responseHeaders:' + angular.toJson(responseHeaders) + '?');
-                    //console.log(angular.toJson((product)));
+                var resource = Restangular.all('/products');
+                resource.post(product).then(function(newResource){
+                    //$scope.products.unshift(product);
+                    //productsService.push(newResource);
                     $modalInstance.close();
                 });
             };

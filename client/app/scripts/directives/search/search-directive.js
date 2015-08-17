@@ -12,7 +12,7 @@
 			return {
 				restrict: 'E',
 				templateUrl: 'scripts/directives/search/search.html',
-				controller: 'SearchCtrl'
+				controller: 'searchCtrl'
 			};
 
 

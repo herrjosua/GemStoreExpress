@@ -1,4 +1,6 @@
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pagination-count">
 	<!-- Need to change to Displaying 1 - 10 of 20 products and Displaying 11 - 20 of 20 products -->
-	Displaying {{(filteredProducts | filter: query).length}} of {{products.length}} products
+	<!-- Displaying {{(filteredProducts | filter: query).length}} of {{products.length}} products -->
+
+	Displaying {{pageFrom}} - {{pageTo}} of {{products.length}} products
 </div>

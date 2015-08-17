@@ -9,20 +9,22 @@
 	 * Controller of the gemStoreApp
 	 */
 	angular.module('gemStoreApp')
-		.controller('UsersCtrl', ['$scope', 'usersService', function ($scope, usersService) {
+		.controller('UsersCtrl', ['$scope', 'usersService', 'Restangular', function ($scope, usersService, Restangular) {
 			$scope.users = {};
 
-			// Gets all the users
-			console.log('Query the database for users!');
-			$scope.users = usersService.query();
+			Restangular.all('/users').getList().then(function(users) {
+				$scope.users = users;
+			});
+
+			$scope.users = Restangular.all('/users').getList.$object;
 
 			$scope.remove = function(id) {
-				var user = $scope.users[id];
+				Restangular.one('/users', id).get().then(function(user) {
+					Restangular.one('/users', id).remove().then(function() {
+						var index = $scope.users.indexOf(user);
+						$scope.users.splice(index, 1);
+					});
 
-				console.log('I will remove the user ' + user.firstname + ' from the front end');
-
-				usersService.remove({id: user._id}, function() {
-					$scope.users.splice(user, 1);
 				});
 			};
 		}]);

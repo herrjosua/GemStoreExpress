@@ -46,7 +46,7 @@ angular.module('gemStoreApp', ['ngResource', 'ui.router', 'ui.bootstrap', 'resta
             .state('products', {
                 url:'/products',
                 templateUrl: 'views/products.html',
-                controller: 'ProductsCtrl',
+                controller: 'productsCtrl',
                 ncyBreadcrumb: {
                     parent: 'home',
                     label: 'Products'
@@ -71,5 +71,22 @@ angular.module('gemStoreApp', ['ngResource', 'ui.router', 'ui.bootstrap', 'resta
     .config(function($breadcrumbProvider) {
         $breadcrumbProvider.setOptions({
             templateUrl: 'scripts/directives/breadcrumbs/breadcrumbs.html',
+        });
+    })
+
+    // Config for Restangular
+    .config(function(RestangularProvider) {
+        RestangularProvider.setBaseUrl('/');
+
+        RestangularProvider.setRestangularFields({
+            id: '_id.$oid'
+        });
+
+        RestangularProvider.setRequestInterceptor(function (elem, operation) {
+            if (operation === 'put') {
+                elem._id = undefined;
+                return elem;
+            }
+            return elem;
         });
     });

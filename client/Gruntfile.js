@@ -185,7 +185,7 @@ module.exports = function (grunt) {
 
                 'parseFiles': true,
 
-                'matchCommunityTests': true,
+                'matchCommunityTests': false,
 
                 'customTests': []
             }
@@ -195,13 +195,15 @@ module.exports = function (grunt) {
         jshint: {
             options: {
                 jshintrc: '.jshintrc',
-                reporter: require('jshint-stylish')
+                reporter: require('jshint-stylish'),
+                smarttabs: true,
             },
             
             all: {
                 src: [
                     'Gruntfile.js',
-                    '<%= yeoman.app %>/scripts/{,*/}*.js'
+                    '<%= yeoman.app %>/scripts/{,*/}*.js',
+                    '!<%= yeoman.app %>//scripts/modernizr-custom.js'
                 ]
             },
 
@@ -209,7 +211,10 @@ module.exports = function (grunt) {
                 options: {
                     jshintrc: 'test/.jshintrc'
                 },
-                src: ['test/spec/{,*/}*.js']
+                src: [
+                    'test/spec/{,*/}*.js',
+                    '!<%= yeoman.app %>/scripts/modernizr-custom.js'
+                ]
             }
         },
 

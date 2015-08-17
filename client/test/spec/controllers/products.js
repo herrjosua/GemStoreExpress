@@ -1,20 +1,20 @@
 'use strict';
 
-describe('Controller: ProductsCtrl', function () {
+describe('Controller: productsCtrl', function () {
 
   // load the controller's module
   beforeEach(module('gemStoreApp'));
 
-  var ProductsCtrl;
+  var productsCtrl;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
-    ProductsCtrl = $controller('ProductsCtrl', {
+    productsCtrl = $controller('productsCtrl', {
       // place here mocked dependencies
     });
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(ProductsCtrl.awesomeThings.length).toBe(3);
+    expect(productsCtrl.awesomeThings.length).toBe(3);
   });
 });
